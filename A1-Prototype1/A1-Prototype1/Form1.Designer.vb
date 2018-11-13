@@ -188,7 +188,7 @@ Partial Class Fridge
         Me.RecipeList.Location = New System.Drawing.Point(56, 68)
         Me.RecipeList.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RecipeList.Name = "RecipeList"
-        Me.RecipeList.Size = New System.Drawing.Size(181, 184)
+        Me.RecipeList.Size = New System.Drawing.Size(122, 121)
         Me.RecipeList.TabIndex = 0
         '
         'Button1

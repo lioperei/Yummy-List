@@ -101,6 +101,7 @@
     <Compile Include="Phone.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Recipe.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
