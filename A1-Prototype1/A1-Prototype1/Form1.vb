@@ -62,7 +62,7 @@
     Private Sub createListButton_Click(sender As Object, e As EventArgs) Handles createListButton.Click
         Dim listName = InputBox("Enter a list name", "New Shopping List", "")
         Console.WriteLine(listName)
-        shoppingListBox.Items.Add(listName)
+        shoppingListView.Items.Add(listName)
         'create and hide new form with all the required items, with the information being pulled from an excel or notepad file 
     End Sub
 
@@ -71,6 +71,8 @@
     End Sub
 
     Private Sub deleteListButton_Click(sender As Object, e As EventArgs) Handles deleteListButton.Click
-        shoppingListBox.Items.Remove(shoppingListBox.SelectedItem)
+        For Each item As ListViewItem In shoppingListView.SelectedItems
+            item.Remove()
+        Next
     End Sub
 End Class

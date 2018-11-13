@@ -31,6 +31,9 @@ Partial Class Fridge
         Me.InventoryButton = New System.Windows.Forms.Button()
         Me.ShoppingListButton = New System.Windows.Forms.Button()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
+        Me.deleteListButton = New System.Windows.Forms.Button()
+        Me.modifyListButton = New System.Windows.Forms.Button()
+        Me.createListButton = New System.Windows.Forms.Button()
         Me.Inventory = New System.Windows.Forms.TabPage()
         Me.Recipes = New System.Windows.Forms.TabPage()
         Me.DeleteRecipe = New System.Windows.Forms.Button()
@@ -68,10 +71,7 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.shoppingListBox = New System.Windows.Forms.ListBox()
-        Me.createListButton = New System.Windows.Forms.Button()
-        Me.modifyListButton = New System.Windows.Forms.Button()
-        Me.deleteListButton = New System.Windows.Forms.Button()
+        Me.shoppingListView = New System.Windows.Forms.ListView()
         Me.TabControl1.SuspendLayout()
         Me.Home.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,10 +180,10 @@ Partial Class Fridge
         '
         'ShoppingLists
         '
+        Me.ShoppingLists.Controls.Add(Me.shoppingListView)
         Me.ShoppingLists.Controls.Add(Me.deleteListButton)
         Me.ShoppingLists.Controls.Add(Me.modifyListButton)
         Me.ShoppingLists.Controls.Add(Me.createListButton)
-        Me.ShoppingLists.Controls.Add(Me.shoppingListBox)
         Me.ShoppingLists.Location = New System.Drawing.Point(4, 29)
         Me.ShoppingLists.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ShoppingLists.Name = "ShoppingLists"
@@ -192,6 +192,33 @@ Partial Class Fridge
         Me.ShoppingLists.TabIndex = 0
         Me.ShoppingLists.Text = "Shopping Lists"
         Me.ShoppingLists.UseVisualStyleBackColor = True
+        '
+        'deleteListButton
+        '
+        Me.deleteListButton.Location = New System.Drawing.Point(148, 415)
+        Me.deleteListButton.Name = "deleteListButton"
+        Me.deleteListButton.Size = New System.Drawing.Size(350, 96)
+        Me.deleteListButton.TabIndex = 3
+        Me.deleteListButton.Text = "Delete List"
+        Me.deleteListButton.UseVisualStyleBackColor = True
+        '
+        'modifyListButton
+        '
+        Me.modifyListButton.Location = New System.Drawing.Point(148, 260)
+        Me.modifyListButton.Name = "modifyListButton"
+        Me.modifyListButton.Size = New System.Drawing.Size(350, 96)
+        Me.modifyListButton.TabIndex = 2
+        Me.modifyListButton.Text = "Modify List"
+        Me.modifyListButton.UseVisualStyleBackColor = True
+        '
+        'createListButton
+        '
+        Me.createListButton.Location = New System.Drawing.Point(148, 112)
+        Me.createListButton.Name = "createListButton"
+        Me.createListButton.Size = New System.Drawing.Size(350, 96)
+        Me.createListButton.TabIndex = 1
+        Me.createListButton.Text = "Create New List"
+        Me.createListButton.UseVisualStyleBackColor = True
         '
         'Inventory
         '
@@ -568,41 +595,13 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'shoppingListBox
+        'shoppingListView
         '
-        Me.shoppingListBox.FormattingEnabled = True
-        Me.shoppingListBox.ItemHeight = 20
-        Me.shoppingListBox.Location = New System.Drawing.Point(728, 52)
-        Me.shoppingListBox.Name = "shoppingListBox"
-        Me.shoppingListBox.Size = New System.Drawing.Size(396, 524)
-        Me.shoppingListBox.TabIndex = 0
-        '
-        'createListButton
-        '
-        Me.createListButton.Location = New System.Drawing.Point(148, 112)
-        Me.createListButton.Name = "createListButton"
-        Me.createListButton.Size = New System.Drawing.Size(350, 96)
-        Me.createListButton.TabIndex = 1
-        Me.createListButton.Text = "Create New List"
-        Me.createListButton.UseVisualStyleBackColor = True
-        '
-        'modifyListButton
-        '
-        Me.modifyListButton.Location = New System.Drawing.Point(148, 260)
-        Me.modifyListButton.Name = "modifyListButton"
-        Me.modifyListButton.Size = New System.Drawing.Size(350, 96)
-        Me.modifyListButton.TabIndex = 2
-        Me.modifyListButton.Text = "Modify List"
-        Me.modifyListButton.UseVisualStyleBackColor = True
-        '
-        'deleteListButton
-        '
-        Me.deleteListButton.Location = New System.Drawing.Point(148, 415)
-        Me.deleteListButton.Name = "deleteListButton"
-        Me.deleteListButton.Size = New System.Drawing.Size(350, 96)
-        Me.deleteListButton.TabIndex = 3
-        Me.deleteListButton.Text = "Delete List"
-        Me.deleteListButton.UseVisualStyleBackColor = True
+        Me.shoppingListView.Location = New System.Drawing.Point(785, 46)
+        Me.shoppingListView.Name = "shoppingListView"
+        Me.shoppingListView.Size = New System.Drawing.Size(361, 484)
+        Me.shoppingListView.TabIndex = 4
+        Me.shoppingListView.UseCompatibleStateImageBehavior = False
         '
         'Fridge
         '
@@ -706,5 +705,5 @@ Partial Class Fridge
     Friend WithEvents deleteListButton As Button
     Friend WithEvents modifyListButton As Button
     Friend WithEvents createListButton As Button
-    Friend WithEvents shoppingListBox As ListBox
+    Friend WithEvents shoppingListView As ListView
 End Class
