@@ -19,6 +19,15 @@
         End If
     End Sub
 
+    Public WriteOnly Property Edit As Boolean
+        Set(value As Boolean)
+            RemoveButton.Visible = value
+            DecrementButton.Visible = value
+            IncrementButton.Visible = value
+
+        End Set
+    End Property
+
     Private Sub DecrementButton_Click(sender As Object, e As EventArgs) Handles DecrementButton.Click
         If _quantity > 0 Then
             _quantity = _quantity - 1

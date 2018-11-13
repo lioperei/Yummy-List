@@ -1,9 +1,21 @@
-﻿Public Class Fridge
+﻿Imports System.Web.Script.Serialization
+Public Class Fridge
+    Private _recipes
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
         Phone.Show()
+
+        'Recipe
+        RecipeList1.Edit = False
+        Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.recipes)
+        _recipes = New JavaScriptSerializer().Deserialize(Of List(Of Object))(recipeJson)
+
+        For Each recipe As Object In _recipes
+            Console.WriteLine(recipe)
+            RecipeNames.Items.Add(recipe("name"))
+        Next
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -14,7 +26,7 @@
         title = "New Recipe"
         recipeName = InputBox(message, title, "")
         RecipeNames.Items.Add(recipeName)
-        RecipeList1.Show()
+        RecipeList1.Edit = True
         RecipeButtonStatus(False)
     End Sub
 
@@ -62,11 +74,11 @@
     End Sub
 
     Private Sub RecipeButton_Click(sender As Object, e As EventArgs) Handles RecipeButton.Click
-        FridgeTabControl.SelectedTab = Recipes
+        FridgeTabControl.SelectedTab = RecipesTab
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles recipeBox.Click
-        FridgeTabControl.SelectedTab = Recipes
+        FridgeTabControl.SelectedTab = RecipesTab
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles cartBox.Click
@@ -75,5 +87,21 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles inventoryBox.Click
         FridgeTabControl.SelectedTab = Inventory
+    End Sub
+
+    Private Sub ModifyRecipeButton_Click(sender As Object, e As EventArgs) Handles ModifyRecipeButton.Click
+        RecipeList1.Edit = True
+        RecipeButtonStatus(False)
+    End Sub
+
+    Private Sub RecipeNames_SelectionIndexChanged(ByVal sender As Object,
+                                              ByVal e As System.EventArgs) _
+            Handles RecipeNames.SelectedValueChanged
+        Dim selectedItem = RecipeNames.SelectedItem
+        For Each item In _recipes
+            If item("name") = selectedItem Then
+                RecipeList1.LoadItems(item("items"))
+            End If
+        Next
     End Sub
 End Class

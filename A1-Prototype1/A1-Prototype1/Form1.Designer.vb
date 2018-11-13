@@ -24,12 +24,16 @@ Partial Class Fridge
     Private Sub InitializeComponent()
         Me.FridgeTabControl = New System.Windows.Forms.TabControl()
         Me.Home = New System.Windows.Forms.TabPage()
+        Me.recipeBox = New System.Windows.Forms.PictureBox()
+        Me.inventoryBox = New System.Windows.Forms.PictureBox()
+        Me.cartBox = New System.Windows.Forms.PictureBox()
         Me.RecipeButton = New System.Windows.Forms.Button()
         Me.InventoryButton = New System.Windows.Forms.Button()
         Me.ShoppingListButton = New System.Windows.Forms.Button()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
         Me.Inventory = New System.Windows.Forms.TabPage()
-        Me.Recipes = New System.Windows.Forms.TabPage()
+        Me.RecipesTab = New System.Windows.Forms.TabPage()
+        Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.DeleteRecipe = New System.Windows.Forms.Button()
         Me.ModifyRecipeButton = New System.Windows.Forms.Button()
         Me.CreateRecipe = New System.Windows.Forms.Button()
@@ -65,16 +69,12 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.recipeBox = New System.Windows.Forms.PictureBox()
-        Me.inventoryBox = New System.Windows.Forms.PictureBox()
-        Me.cartBox = New System.Windows.Forms.PictureBox()
-        Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
-        Me.Recipes.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RecipesTab.SuspendLayout()
         Me.SuspendLayout()
         '
         'FridgeTabControl
@@ -82,7 +82,7 @@ Partial Class Fridge
         Me.FridgeTabControl.Controls.Add(Me.Home)
         Me.FridgeTabControl.Controls.Add(Me.ShoppingLists)
         Me.FridgeTabControl.Controls.Add(Me.Inventory)
-        Me.FridgeTabControl.Controls.Add(Me.Recipes)
+        Me.FridgeTabControl.Controls.Add(Me.RecipesTab)
         Me.FridgeTabControl.Location = New System.Drawing.Point(0, 0)
         Me.FridgeTabControl.Name = "FridgeTabControl"
         Me.FridgeTabControl.SelectedIndex = 0
@@ -104,6 +104,42 @@ Partial Class Fridge
         Me.Home.TabIndex = 3
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = True
+        '
+        'recipeBox
+        '
+        Me.recipeBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.inventorypic
+        Me.recipeBox.Location = New System.Drawing.Point(435, 292)
+        Me.recipeBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.recipeBox.Name = "recipeBox"
+        Me.recipeBox.Size = New System.Drawing.Size(111, 85)
+        Me.recipeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.recipeBox.TabIndex = 5
+        Me.recipeBox.TabStop = False
+        '
+        'inventoryBox
+        '
+        Me.inventoryBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
+        Me.inventoryBox.Location = New System.Drawing.Point(435, 161)
+        Me.inventoryBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.inventoryBox.Name = "inventoryBox"
+        Me.inventoryBox.Size = New System.Drawing.Size(111, 85)
+        Me.inventoryBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.inventoryBox.TabIndex = 4
+        Me.inventoryBox.TabStop = False
+        '
+        'cartBox
+        '
+        Me.cartBox.BackColor = System.Drawing.Color.Navy
+        Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
+        Me.cartBox.Location = New System.Drawing.Point(441, 32)
+        Me.cartBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.cartBox.Name = "cartBox"
+        Me.cartBox.Size = New System.Drawing.Size(94, 75)
+        Me.cartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cartBox.TabIndex = 3
+        Me.cartBox.TabStop = False
         '
         'RecipeButton
         '
@@ -164,20 +200,27 @@ Partial Class Fridge
         Me.Inventory.Text = "Inventory"
         Me.Inventory.UseVisualStyleBackColor = True
         '
-        'Recipes
+        'RecipesTab
         '
-        Me.Recipes.Controls.Add(Me.RecipeList1)
-        Me.Recipes.Controls.Add(Me.DeleteRecipe)
-        Me.Recipes.Controls.Add(Me.ModifyRecipeButton)
-        Me.Recipes.Controls.Add(Me.CreateRecipe)
-        Me.Recipes.Controls.Add(Me.Label1)
-        Me.Recipes.Controls.Add(Me.RecipeNames)
-        Me.Recipes.Location = New System.Drawing.Point(4, 22)
-        Me.Recipes.Name = "Recipes"
-        Me.Recipes.Size = New System.Drawing.Size(791, 408)
-        Me.Recipes.TabIndex = 2
-        Me.Recipes.Text = "Recipes"
-        Me.Recipes.UseVisualStyleBackColor = True
+        Me.RecipesTab.Controls.Add(Me.RecipeList1)
+        Me.RecipesTab.Controls.Add(Me.DeleteRecipe)
+        Me.RecipesTab.Controls.Add(Me.ModifyRecipeButton)
+        Me.RecipesTab.Controls.Add(Me.CreateRecipe)
+        Me.RecipesTab.Controls.Add(Me.Label1)
+        Me.RecipesTab.Controls.Add(Me.RecipeNames)
+        Me.RecipesTab.Location = New System.Drawing.Point(4, 22)
+        Me.RecipesTab.Name = "RecipesTab"
+        Me.RecipesTab.Size = New System.Drawing.Size(791, 408)
+        Me.RecipesTab.TabIndex = 2
+        Me.RecipesTab.Text = "Recipes"
+        Me.RecipesTab.UseVisualStyleBackColor = True
+        '
+        'RecipeList1
+        '
+        Me.RecipeList1.Location = New System.Drawing.Point(366, 60)
+        Me.RecipeList1.Name = "RecipeList1"
+        Me.RecipeList1.Size = New System.Drawing.Size(321, 269)
+        Me.RecipeList1.TabIndex = 5
         '
         'DeleteRecipe
         '
@@ -494,50 +537,6 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'recipeBox
-        '
-        Me.recipeBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.inventorypic
-        Me.recipeBox.Location = New System.Drawing.Point(435, 292)
-        Me.recipeBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.recipeBox.Name = "recipeBox"
-        Me.recipeBox.Size = New System.Drawing.Size(111, 85)
-        Me.recipeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.recipeBox.TabIndex = 5
-        Me.recipeBox.TabStop = False
-        '
-        'inventoryBox
-        '
-        Me.inventoryBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
-        Me.inventoryBox.Location = New System.Drawing.Point(435, 161)
-        Me.inventoryBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.inventoryBox.Name = "inventoryBox"
-        Me.inventoryBox.Size = New System.Drawing.Size(111, 85)
-        Me.inventoryBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.inventoryBox.TabIndex = 4
-        Me.inventoryBox.TabStop = False
-        '
-        'cartBox
-        '
-        Me.cartBox.BackColor = System.Drawing.Color.Navy
-        Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
-        Me.cartBox.Location = New System.Drawing.Point(441, 32)
-        Me.cartBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.cartBox.Name = "cartBox"
-        Me.cartBox.Size = New System.Drawing.Size(94, 75)
-        Me.cartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.cartBox.TabIndex = 3
-        Me.cartBox.TabStop = False
-        '
-        'RecipeList1
-        '
-        Me.RecipeList1.Location = New System.Drawing.Point(366, 60)
-        Me.RecipeList1.Name = "RecipeList1"
-        Me.RecipeList1.Size = New System.Drawing.Size(313, 268)
-        Me.RecipeList1.TabIndex = 5
-        Me.RecipeList1.Visible = False
-        '
         'Fridge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -580,11 +579,11 @@ Partial Class Fridge
         Me.Text = "Fridge"
         Me.FridgeTabControl.ResumeLayout(False)
         Me.Home.ResumeLayout(False)
-        Me.Recipes.ResumeLayout(False)
-        Me.Recipes.PerformLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RecipesTab.ResumeLayout(False)
+        Me.RecipesTab.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -592,7 +591,7 @@ Partial Class Fridge
     Friend WithEvents FridgeTabControl As TabControl
     Friend WithEvents ShoppingLists As TabPage
     Friend WithEvents Inventory As TabPage
-    Friend WithEvents Recipes As TabPage
+    Friend WithEvents RecipesTab As TabPage
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button

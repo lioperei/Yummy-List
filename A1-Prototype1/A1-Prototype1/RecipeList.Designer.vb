@@ -23,65 +23,64 @@ Partial Class RecipeList
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.RecipeItemPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.AddRecipeButton = New System.Windows.Forms.Button()
-        Me.SaveButton = New System.Windows.Forms.Button()
-        Me.ImportButton = New System.Windows.Forms.Button()
-        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.AddRecipeItem = New System.Windows.Forms.Button()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.Import = New System.Windows.Forms.Button()
+        Me.Cancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'RecipeItemPanel
         '
-        Me.RecipeItemPanel.AutoScroll = True
         Me.RecipeItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.RecipeItemPanel.Location = New System.Drawing.Point(10, 36)
         Me.RecipeItemPanel.Name = "RecipeItemPanel"
         Me.RecipeItemPanel.Size = New System.Drawing.Size(300, 183)
         Me.RecipeItemPanel.TabIndex = 0
         '
-        'AddRecipeButton
+        'AddRecipeItem
         '
-        Me.AddRecipeButton.Location = New System.Drawing.Point(91, 225)
-        Me.AddRecipeButton.Name = "AddRecipeButton"
-        Me.AddRecipeButton.Size = New System.Drawing.Size(31, 23)
-        Me.AddRecipeButton.TabIndex = 1
-        Me.AddRecipeButton.Text = "+"
-        Me.AddRecipeButton.UseVisualStyleBackColor = True
+        Me.AddRecipeItem.Location = New System.Drawing.Point(91, 225)
+        Me.AddRecipeItem.Name = "AddRecipeItem"
+        Me.AddRecipeItem.Size = New System.Drawing.Size(31, 23)
+        Me.AddRecipeItem.TabIndex = 1
+        Me.AddRecipeItem.Text = "+"
+        Me.AddRecipeItem.UseVisualStyleBackColor = True
         '
-        'SaveButton
+        'Save
         '
-        Me.SaveButton.Location = New System.Drawing.Point(235, 225)
-        Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(75, 23)
-        Me.SaveButton.TabIndex = 0
-        Me.SaveButton.Text = "SAVE"
-        Me.SaveButton.UseVisualStyleBackColor = True
+        Me.Save.Location = New System.Drawing.Point(235, 225)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(75, 23)
+        Me.Save.TabIndex = 0
+        Me.Save.Text = "SAVE"
+        Me.Save.UseVisualStyleBackColor = True
         '
-        'ImportButton
+        'Import
         '
-        Me.ImportButton.Location = New System.Drawing.Point(10, 225)
-        Me.ImportButton.Name = "ImportButton"
-        Me.ImportButton.Size = New System.Drawing.Size(75, 23)
-        Me.ImportButton.TabIndex = 2
-        Me.ImportButton.Text = "IMPORT"
-        Me.ImportButton.UseVisualStyleBackColor = True
+        Me.Import.Location = New System.Drawing.Point(10, 225)
+        Me.Import.Name = "Import"
+        Me.Import.Size = New System.Drawing.Size(75, 23)
+        Me.Import.TabIndex = 2
+        Me.Import.Text = "IMPORT"
+        Me.Import.UseVisualStyleBackColor = True
         '
-        'CancelButton
+        'Cancel
         '
-        Me.CancelButton.Location = New System.Drawing.Point(154, 225)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelButton.TabIndex = 3
-        Me.CancelButton.Text = "CANCEL"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.Cancel.Location = New System.Drawing.Point(154, 225)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(75, 23)
+        Me.Cancel.TabIndex = 3
+        Me.Cancel.Text = "CANCEL"
+        Me.Cancel.UseVisualStyleBackColor = True
         '
         'RecipeList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.CancelButton)
-        Me.Controls.Add(Me.ImportButton)
-        Me.Controls.Add(Me.SaveButton)
-        Me.Controls.Add(Me.AddRecipeButton)
+        Me.Controls.Add(Me.Cancel)
+        Me.Controls.Add(Me.Import)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.AddRecipeItem)
         Me.Controls.Add(Me.RecipeItemPanel)
         Me.Name = "RecipeList"
         Me.Size = New System.Drawing.Size(321, 269)
@@ -90,8 +89,8 @@ Partial Class RecipeList
     End Sub
 
     Friend WithEvents RecipeItemPanel As FlowLayoutPanel
-    Friend WithEvents AddRecipeButton As Button
-    Friend WithEvents SaveButton As Button
-    Friend WithEvents ImportButton As Button
-    Friend WithEvents CancelButton As Button
+    Friend WithEvents AddRecipeItem As Button
+    Friend WithEvents Save As Button
+    Friend WithEvents Import As Button
+    Friend WithEvents Cancel As Button
 End Class
