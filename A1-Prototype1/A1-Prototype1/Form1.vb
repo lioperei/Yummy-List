@@ -40,5 +40,6 @@
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
         TabControl1.SelectedTab = Home
+        ' Need to figure out how to hide home button 
     End Sub
 End Class
