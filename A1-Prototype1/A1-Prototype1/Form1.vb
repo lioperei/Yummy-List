@@ -8,4 +8,21 @@
 
     End Sub
 
+    Private Sub CreateRecipe_Click(sender As Object, e As EventArgs) Handles CreateRecipe.Click
+        Dim message, title, recipeName
+        message = "Enter a Recipe Name"
+        title = "New Recipe"
+        recipeName = InputBox(message, title, "")
+        Console.WriteLine(recipeName)
+        RecipeList.Items.Add(recipeName)
+    End Sub
+
+    Private Sub DeleteRecipe_Click(sender As Object, e As EventArgs) Handles DeleteRecipe.Click
+        Dim selected = RecipeList.SelectedItem
+        Console.WriteLine(selected)
+        If selected Then
+            RecipeList.Items.Remove(selected)
+            MessageBox.Show("Recipe {0} deleted", selected)
+        End If
+    End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Fridge
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,17 @@ Partial Class Fridge
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
         Me.Inventory = New System.Windows.Forms.TabPage()
         Me.Recipes = New System.Windows.Forms.TabPage()
+        Me.DeleteRecipe = New System.Windows.Forms.Button()
+        Me.Button31 = New System.Windows.Forms.Button()
+        Me.CreateRecipe = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.RecipeList = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -56,6 +61,7 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
+        Me.Recipes.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -91,12 +97,61 @@ Partial Class Fridge
         '
         'Recipes
         '
+        Me.Recipes.Controls.Add(Me.DeleteRecipe)
+        Me.Recipes.Controls.Add(Me.Button31)
+        Me.Recipes.Controls.Add(Me.CreateRecipe)
+        Me.Recipes.Controls.Add(Me.Label1)
+        Me.Recipes.Controls.Add(Me.RecipeList)
         Me.Recipes.Location = New System.Drawing.Point(4, 22)
         Me.Recipes.Name = "Recipes"
         Me.Recipes.Size = New System.Drawing.Size(791, 408)
         Me.Recipes.TabIndex = 2
         Me.Recipes.Text = "Recipes"
         Me.Recipes.UseVisualStyleBackColor = True
+        '
+        'DeleteRecipe
+        '
+        Me.DeleteRecipe.Location = New System.Drawing.Point(184, 142)
+        Me.DeleteRecipe.Name = "DeleteRecipe"
+        Me.DeleteRecipe.Size = New System.Drawing.Size(144, 23)
+        Me.DeleteRecipe.TabIndex = 4
+        Me.DeleteRecipe.Text = "Delete Recipe"
+        Me.DeleteRecipe.UseVisualStyleBackColor = True
+        '
+        'Button31
+        '
+        Me.Button31.Location = New System.Drawing.Point(184, 98)
+        Me.Button31.Name = "Button31"
+        Me.Button31.Size = New System.Drawing.Size(144, 23)
+        Me.Button31.TabIndex = 3
+        Me.Button31.Text = "Modify Recipe"
+        Me.Button31.UseVisualStyleBackColor = True
+        '
+        'CreateRecipe
+        '
+        Me.CreateRecipe.Location = New System.Drawing.Point(184, 60)
+        Me.CreateRecipe.Name = "CreateRecipe"
+        Me.CreateRecipe.Size = New System.Drawing.Size(144, 23)
+        Me.CreateRecipe.TabIndex = 2
+        Me.CreateRecipe.Text = "Create New Recipe"
+        Me.CreateRecipe.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(363, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Recipes"
+        '
+        'RecipeList
+        '
+        Me.RecipeList.FormattingEnabled = True
+        Me.RecipeList.Location = New System.Drawing.Point(37, 44)
+        Me.RecipeList.Name = "RecipeList"
+        Me.RecipeList.Size = New System.Drawing.Size(122, 121)
+        Me.RecipeList.TabIndex = 0
         '
         'Button1
         '
@@ -399,6 +454,8 @@ Partial Class Fridge
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fridge"
         Me.TabControl1.ResumeLayout(False)
+        Me.Recipes.ResumeLayout(False)
+        Me.Recipes.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -436,4 +493,9 @@ Partial Class Fridge
     Friend WithEvents Button27 As Button
     Friend WithEvents Button28 As Button
     Friend WithEvents Button29 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents RecipeList As ListBox
+    Friend WithEvents CreateRecipe As Button
+    Friend WithEvents DeleteRecipe As Button
+    Friend WithEvents Button31 As Button
 End Class
