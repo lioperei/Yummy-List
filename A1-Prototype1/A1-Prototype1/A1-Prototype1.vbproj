@@ -128,5 +128,23 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recipe.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping List.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventorypic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recipepic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

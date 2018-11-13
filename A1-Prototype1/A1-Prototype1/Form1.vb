@@ -26,7 +26,16 @@
         End If
     End Sub
 
-    Private Sub ShoppingList_Click(sender As Object, e As EventArgs) Handles ShoppingList.Click
+    Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
+        TabControl1.SelectedTab = Home
+        ' Need to figure out how to hide home button 
+    End Sub
+
+    Private Sub Fridge_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ShoppingListButton_Click(sender As Object, e As EventArgs) Handles ShoppingListButton.Click
         TabControl1.SelectedTab = ShoppingLists
     End Sub
 
@@ -38,8 +47,15 @@
         TabControl1.SelectedTab = Recipes
     End Sub
 
-    Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
-        TabControl1.SelectedTab = Home
-        ' Need to figure out how to hide home button 
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles recipeBox.Click
+        TabControl1.SelectedTab = Recipes
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles cartBox.Click
+        TabControl1.SelectedTab = ShoppingLists
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles inventoryBox.Click
+        TabControl1.SelectedTab = Inventory
     End Sub
 End Class
