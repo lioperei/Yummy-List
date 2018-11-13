@@ -58,4 +58,19 @@
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles inventoryBox.Click
         TabControl1.SelectedTab = Inventory
     End Sub
+
+    Private Sub createListButton_Click(sender As Object, e As EventArgs) Handles createListButton.Click
+        Dim listName = InputBox("Enter a list name", "New Shopping List", "")
+        Console.WriteLine(listName)
+        shoppingListBox.Items.Add(listName)
+        'create and hide new form with all the required items, with the information being pulled from an excel or notepad file 
+    End Sub
+
+    Private Sub modifyListButton_Click(sender As Object, e As EventArgs) Handles modifyListButton.Click
+        ' Need to show that was hidden new form that handles a specific shopping list 
+    End Sub
+
+    Private Sub deleteListButton_Click(sender As Object, e As EventArgs) Handles deleteListButton.Click
+        shoppingListBox.Items.Remove(shoppingListBox.SelectedItem)
+    End Sub
 End Class

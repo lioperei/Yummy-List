@@ -24,6 +24,12 @@ Partial Class Fridge
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Home = New System.Windows.Forms.TabPage()
+        Me.recipeBox = New System.Windows.Forms.PictureBox()
+        Me.inventoryBox = New System.Windows.Forms.PictureBox()
+        Me.cartBox = New System.Windows.Forms.PictureBox()
+        Me.RecipeButton = New System.Windows.Forms.Button()
+        Me.InventoryButton = New System.Windows.Forms.Button()
+        Me.ShoppingListButton = New System.Windows.Forms.Button()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
         Me.Inventory = New System.Windows.Forms.TabPage()
         Me.Recipes = New System.Windows.Forms.TabPage()
@@ -62,18 +68,17 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.ShoppingListButton = New System.Windows.Forms.Button()
-        Me.InventoryButton = New System.Windows.Forms.Button()
-        Me.RecipeButton = New System.Windows.Forms.Button()
-        Me.recipeBox = New System.Windows.Forms.PictureBox()
-        Me.inventoryBox = New System.Windows.Forms.PictureBox()
-        Me.cartBox = New System.Windows.Forms.PictureBox()
+        Me.shoppingListBox = New System.Windows.Forms.ListBox()
+        Me.createListButton = New System.Windows.Forms.Button()
+        Me.modifyListButton = New System.Windows.Forms.Button()
+        Me.deleteListButton = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.Home.SuspendLayout()
-        Me.Recipes.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ShoppingLists.SuspendLayout()
+        Me.Recipes.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -104,8 +109,81 @@ Partial Class Fridge
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = True
         '
+        'recipeBox
+        '
+        Me.recipeBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.inventorypic
+        Me.recipeBox.Location = New System.Drawing.Point(653, 450)
+        Me.recipeBox.Name = "recipeBox"
+        Me.recipeBox.Size = New System.Drawing.Size(166, 131)
+        Me.recipeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.recipeBox.TabIndex = 5
+        Me.recipeBox.TabStop = False
+        '
+        'inventoryBox
+        '
+        Me.inventoryBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
+        Me.inventoryBox.Location = New System.Drawing.Point(653, 247)
+        Me.inventoryBox.Name = "inventoryBox"
+        Me.inventoryBox.Size = New System.Drawing.Size(166, 131)
+        Me.inventoryBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.inventoryBox.TabIndex = 4
+        Me.inventoryBox.TabStop = False
+        '
+        'cartBox
+        '
+        Me.cartBox.BackColor = System.Drawing.Color.Navy
+        Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
+        Me.cartBox.Location = New System.Drawing.Point(662, 50)
+        Me.cartBox.Name = "cartBox"
+        Me.cartBox.Size = New System.Drawing.Size(141, 116)
+        Me.cartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cartBox.TabIndex = 3
+        Me.cartBox.TabStop = False
+        '
+        'RecipeButton
+        '
+        Me.RecipeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.RecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecipeButton.ForeColor = System.Drawing.Color.White
+        Me.RecipeButton.Location = New System.Drawing.Point(639, 431)
+        Me.RecipeButton.Name = "RecipeButton"
+        Me.RecipeButton.Size = New System.Drawing.Size(510, 179)
+        Me.RecipeButton.TabIndex = 2
+        Me.RecipeButton.Text = "Recipes"
+        Me.RecipeButton.UseVisualStyleBackColor = False
+        '
+        'InventoryButton
+        '
+        Me.InventoryButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.InventoryButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InventoryButton.ForeColor = System.Drawing.Color.White
+        Me.InventoryButton.Location = New System.Drawing.Point(639, 222)
+        Me.InventoryButton.Name = "InventoryButton"
+        Me.InventoryButton.Size = New System.Drawing.Size(510, 179)
+        Me.InventoryButton.TabIndex = 1
+        Me.InventoryButton.Text = "Inventory"
+        Me.InventoryButton.UseVisualStyleBackColor = False
+        '
+        'ShoppingListButton
+        '
+        Me.ShoppingListButton.BackColor = System.Drawing.Color.Navy
+        Me.ShoppingListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShoppingListButton.ForeColor = System.Drawing.Color.White
+        Me.ShoppingListButton.Location = New System.Drawing.Point(639, 17)
+        Me.ShoppingListButton.Name = "ShoppingListButton"
+        Me.ShoppingListButton.Size = New System.Drawing.Size(510, 179)
+        Me.ShoppingListButton.TabIndex = 0
+        Me.ShoppingListButton.Text = "Shopping" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "List"
+        Me.ShoppingListButton.UseVisualStyleBackColor = False
+        '
         'ShoppingLists
         '
+        Me.ShoppingLists.Controls.Add(Me.deleteListButton)
+        Me.ShoppingLists.Controls.Add(Me.modifyListButton)
+        Me.ShoppingLists.Controls.Add(Me.createListButton)
+        Me.ShoppingLists.Controls.Add(Me.shoppingListBox)
         Me.ShoppingLists.Location = New System.Drawing.Point(4, 29)
         Me.ShoppingLists.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ShoppingLists.Name = "ShoppingLists"
@@ -188,7 +266,7 @@ Partial Class Fridge
         Me.RecipeList.Location = New System.Drawing.Point(56, 68)
         Me.RecipeList.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RecipeList.Name = "RecipeList"
-        Me.RecipeList.Size = New System.Drawing.Size(122, 121)
+        Me.RecipeList.Size = New System.Drawing.Size(122, 104)
         Me.RecipeList.TabIndex = 0
         '
         'Button1
@@ -490,74 +568,41 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'ShoppingListButton
+        'shoppingListBox
         '
-        Me.ShoppingListButton.BackColor = System.Drawing.Color.Navy
-        Me.ShoppingListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ShoppingListButton.ForeColor = System.Drawing.Color.White
-        Me.ShoppingListButton.Location = New System.Drawing.Point(639, 17)
-        Me.ShoppingListButton.Name = "ShoppingListButton"
-        Me.ShoppingListButton.Size = New System.Drawing.Size(510, 179)
-        Me.ShoppingListButton.TabIndex = 0
-        Me.ShoppingListButton.Text = "Shopping" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "List"
-        Me.ShoppingListButton.UseVisualStyleBackColor = False
+        Me.shoppingListBox.FormattingEnabled = True
+        Me.shoppingListBox.ItemHeight = 20
+        Me.shoppingListBox.Location = New System.Drawing.Point(728, 52)
+        Me.shoppingListBox.Name = "shoppingListBox"
+        Me.shoppingListBox.Size = New System.Drawing.Size(396, 524)
+        Me.shoppingListBox.TabIndex = 0
         '
-        'InventoryButton
+        'createListButton
         '
-        Me.InventoryButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.InventoryButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InventoryButton.ForeColor = System.Drawing.Color.White
-        Me.InventoryButton.Location = New System.Drawing.Point(639, 222)
-        Me.InventoryButton.Name = "InventoryButton"
-        Me.InventoryButton.Size = New System.Drawing.Size(510, 179)
-        Me.InventoryButton.TabIndex = 1
-        Me.InventoryButton.Text = "Inventory"
-        Me.InventoryButton.UseVisualStyleBackColor = False
+        Me.createListButton.Location = New System.Drawing.Point(148, 112)
+        Me.createListButton.Name = "createListButton"
+        Me.createListButton.Size = New System.Drawing.Size(350, 96)
+        Me.createListButton.TabIndex = 1
+        Me.createListButton.Text = "Create New List"
+        Me.createListButton.UseVisualStyleBackColor = True
         '
-        'RecipeButton
+        'modifyListButton
         '
-        Me.RecipeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.RecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecipeButton.ForeColor = System.Drawing.Color.White
-        Me.RecipeButton.Location = New System.Drawing.Point(639, 431)
-        Me.RecipeButton.Name = "RecipeButton"
-        Me.RecipeButton.Size = New System.Drawing.Size(510, 179)
-        Me.RecipeButton.TabIndex = 2
-        Me.RecipeButton.Text = "Recipes"
-        Me.RecipeButton.UseVisualStyleBackColor = False
+        Me.modifyListButton.Location = New System.Drawing.Point(148, 260)
+        Me.modifyListButton.Name = "modifyListButton"
+        Me.modifyListButton.Size = New System.Drawing.Size(350, 96)
+        Me.modifyListButton.TabIndex = 2
+        Me.modifyListButton.Text = "Modify List"
+        Me.modifyListButton.UseVisualStyleBackColor = True
         '
-        'recipeBox
+        'deleteListButton
         '
-        Me.recipeBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.inventorypic
-        Me.recipeBox.Location = New System.Drawing.Point(653, 450)
-        Me.recipeBox.Name = "recipeBox"
-        Me.recipeBox.Size = New System.Drawing.Size(166, 131)
-        Me.recipeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.recipeBox.TabIndex = 5
-        Me.recipeBox.TabStop = False
-        '
-        'inventoryBox
-        '
-        Me.inventoryBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
-        Me.inventoryBox.Location = New System.Drawing.Point(653, 247)
-        Me.inventoryBox.Name = "inventoryBox"
-        Me.inventoryBox.Size = New System.Drawing.Size(166, 131)
-        Me.inventoryBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.inventoryBox.TabIndex = 4
-        Me.inventoryBox.TabStop = False
-        '
-        'cartBox
-        '
-        Me.cartBox.BackColor = System.Drawing.Color.Navy
-        Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
-        Me.cartBox.Location = New System.Drawing.Point(662, 50)
-        Me.cartBox.Name = "cartBox"
-        Me.cartBox.Size = New System.Drawing.Size(141, 116)
-        Me.cartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.cartBox.TabIndex = 3
-        Me.cartBox.TabStop = False
+        Me.deleteListButton.Location = New System.Drawing.Point(148, 415)
+        Me.deleteListButton.Name = "deleteListButton"
+        Me.deleteListButton.Size = New System.Drawing.Size(350, 96)
+        Me.deleteListButton.TabIndex = 3
+        Me.deleteListButton.Text = "Delete List"
+        Me.deleteListButton.UseVisualStyleBackColor = True
         '
         'Fridge
         '
@@ -602,11 +647,12 @@ Partial Class Fridge
         Me.Text = "Fridge"
         Me.TabControl1.ResumeLayout(False)
         Me.Home.ResumeLayout(False)
-        Me.Recipes.ResumeLayout(False)
-        Me.Recipes.PerformLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ShoppingLists.ResumeLayout(False)
+        Me.Recipes.ResumeLayout(False)
+        Me.Recipes.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -657,4 +703,8 @@ Partial Class Fridge
     Friend WithEvents recipeBox As PictureBox
     Friend WithEvents inventoryBox As PictureBox
     Friend WithEvents cartBox As PictureBox
+    Friend WithEvents deleteListButton As Button
+    Friend WithEvents modifyListButton As Button
+    Friend WithEvents createListButton As Button
+    Friend WithEvents shoppingListBox As ListBox
 End Class
