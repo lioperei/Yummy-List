@@ -25,4 +25,20 @@
             MessageBox.Show("Recipe {0} deleted", selected)
         End If
     End Sub
+
+    Private Sub ShoppingList_Click(sender As Object, e As EventArgs) Handles ShoppingList.Click
+        TabControl1.SelectedTab = ShoppingLists
+    End Sub
+
+    Private Sub InventoryButton_Click(sender As Object, e As EventArgs) Handles InventoryButton.Click
+        TabControl1.SelectedTab = Inventory
+    End Sub
+
+    Private Sub RecipeButton_Click(sender As Object, e As EventArgs) Handles RecipeButton.Click
+        TabControl1.SelectedTab = Recipes
+    End Sub
+
+    Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
+        TabControl1.SelectedTab = Home
+    End Sub
 End Class
