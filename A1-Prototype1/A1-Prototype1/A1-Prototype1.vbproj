@@ -101,7 +101,18 @@
     <Compile Include="Phone.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recipe.vb" />
+    <Compile Include="RecipeItem.Designer.vb">
+      <DependentUpon>RecipeItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecipeList.Designer.vb">
+      <DependentUpon>RecipeList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -115,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phone.resx">
       <DependentUpon>Phone.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeItem.resx">
+      <DependentUpon>RecipeItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeList.resx">
+      <DependentUpon>RecipeList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
