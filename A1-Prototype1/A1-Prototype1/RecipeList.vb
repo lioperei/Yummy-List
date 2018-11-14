@@ -1,6 +1,4 @@
-﻿
-
-Public Class RecipeList
+﻿Public Class RecipeList
     Private _items
     Public Sub New()
 

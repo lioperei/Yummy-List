@@ -108,7 +108,6 @@
     <Compile Include="RecipeItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RecipeItemClass.vb" />
     <Compile Include="RecipeList.Designer.vb">
       <DependentUpon>RecipeList.vb</DependentUpon>
     </Compile>

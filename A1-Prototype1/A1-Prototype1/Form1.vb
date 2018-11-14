@@ -6,9 +6,8 @@ Public Class Fridge
         ' This call is required by the designer.
         InitializeComponent()
         Phone.Show()
-
         'Recipe
-        RecipeList1.Edit = False
+        Recipelist1.Edit = False
         Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.recipes)
         _recipes = New JavaScriptSerializer().Deserialize(Of List(Of Object))(recipeJson)
 
