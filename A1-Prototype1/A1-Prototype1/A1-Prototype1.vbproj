@@ -52,6 +52,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -101,6 +102,24 @@
     <Compile Include="Phone.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RecipeItem.Designer.vb">
+      <DependentUpon>RecipeItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecipeItemClass.vb" />
+    <Compile Include="RecipeList.Designer.vb">
+      <DependentUpon>RecipeList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -114,6 +133,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phone.resx">
       <DependentUpon>Phone.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeItem.resx">
+      <DependentUpon>RecipeItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeList.resx">
+      <DependentUpon>RecipeList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Data.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +159,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\recipes.json" />
     <None Include="Resources\inventory.jpg" />
   </ItemGroup>
   <ItemGroup>
