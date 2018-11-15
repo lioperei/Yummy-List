@@ -37,11 +37,7 @@ Partial Class Fridge
         Me.createListButton = New System.Windows.Forms.Button()
         Me.Inventory = New System.Windows.Forms.TabPage()
         Me.RecipesTab = New System.Windows.Forms.TabPage()
-        Me.DeleteRecipe = New System.Windows.Forms.Button()
-        Me.ModifyRecipeButton = New System.Windows.Forms.Button()
-        Me.CreateRecipe = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RecipeNames = New System.Windows.Forms.ListBox()
+        Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -72,7 +68,6 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,11 +246,6 @@ Partial Class Fridge
         'RecipesTab
         '
         Me.RecipesTab.Controls.Add(Me.RecipeList1)
-        Me.RecipesTab.Controls.Add(Me.DeleteRecipe)
-        Me.RecipesTab.Controls.Add(Me.ModifyRecipeButton)
-        Me.RecipesTab.Controls.Add(Me.CreateRecipe)
-        Me.RecipesTab.Controls.Add(Me.Label1)
-        Me.RecipesTab.Controls.Add(Me.RecipeNames)
         Me.RecipesTab.Location = New System.Drawing.Point(4, 22)
         Me.RecipesTab.Name = "RecipesTab"
         Me.RecipesTab.Size = New System.Drawing.Size(791, 408)
@@ -263,49 +253,12 @@ Partial Class Fridge
         Me.RecipesTab.Text = "Recipes"
         Me.RecipesTab.UseVisualStyleBackColor = True
         '
-        'DeleteRecipe
+        'RecipeList1
         '
-        Me.DeleteRecipe.Location = New System.Drawing.Point(184, 142)
-        Me.DeleteRecipe.Name = "DeleteRecipe"
-        Me.DeleteRecipe.Size = New System.Drawing.Size(144, 23)
-        Me.DeleteRecipe.TabIndex = 4
-        Me.DeleteRecipe.Text = "Delete Recipe"
-        Me.DeleteRecipe.UseVisualStyleBackColor = True
-        '
-        'ModifyRecipeButton
-        '
-        Me.ModifyRecipeButton.Location = New System.Drawing.Point(184, 98)
-        Me.ModifyRecipeButton.Name = "ModifyRecipeButton"
-        Me.ModifyRecipeButton.Size = New System.Drawing.Size(144, 23)
-        Me.ModifyRecipeButton.TabIndex = 3
-        Me.ModifyRecipeButton.Text = "Modify Recipe"
-        Me.ModifyRecipeButton.UseVisualStyleBackColor = True
-        '
-        'CreateRecipe
-        '
-        Me.CreateRecipe.Location = New System.Drawing.Point(184, 60)
-        Me.CreateRecipe.Name = "CreateRecipe"
-        Me.CreateRecipe.Size = New System.Drawing.Size(144, 23)
-        Me.CreateRecipe.TabIndex = 2
-        Me.CreateRecipe.Text = "Create New Recipe"
-        Me.CreateRecipe.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(363, 10)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Recipes"
-        '
-        'RecipeNames
-        '
-        Me.RecipeNames.FormattingEnabled = True
-        Me.RecipeNames.Location = New System.Drawing.Point(37, 44)
-        Me.RecipeNames.Name = "RecipeNames"
-        Me.RecipeNames.Size = New System.Drawing.Size(83, 69)
-        Me.RecipeNames.TabIndex = 0
+        Me.RecipeList1.Location = New System.Drawing.Point(3, 3)
+        Me.RecipeList1.Name = "RecipeList1"
+        Me.RecipeList1.Size = New System.Drawing.Size(684, 402)
+        Me.RecipeList1.TabIndex = 5
         '
         'Button1
         '
@@ -578,13 +531,6 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'RecipeList1
-        '
-        Me.RecipeList1.Location = New System.Drawing.Point(365, 44)
-        Me.RecipeList1.Name = "RecipeList1"
-        Me.RecipeList1.Size = New System.Drawing.Size(321, 361)
-        Me.RecipeList1.TabIndex = 5
-        '
         'Fridge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -632,7 +578,6 @@ Partial Class Fridge
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShoppingLists.ResumeLayout(False)
         Me.RecipesTab.ResumeLayout(False)
-        Me.RecipesTab.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -670,11 +615,6 @@ Partial Class Fridge
     Friend WithEvents Button27 As Button
     Friend WithEvents Button28 As Button
     Friend WithEvents Button29 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents RecipeNames As ListBox
-    Friend WithEvents CreateRecipe As Button
-    Friend WithEvents DeleteRecipe As Button
-    Friend WithEvents ModifyRecipeButton As Button
     Friend WithEvents Home As TabPage
     Friend WithEvents HomeButton As Button
     Friend WithEvents RecipeButton As Button

@@ -23,7 +23,6 @@
             RemoveButton.Visible = value
             DecrementButton.Visible = value
             IncrementButton.Visible = value
-
         End Set
     End Property
 
