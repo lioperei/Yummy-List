@@ -1,6 +1,6 @@
 ﻿Imports System.Web.Script.Serialization
 Public Class Fridge
-    Private _recipes
+    Public _recipes As List(Of RecipeData)
     Public Sub New()
 
         ' This call is required by the designer.
@@ -8,13 +8,14 @@ Public Class Fridge
         Phone.Show()
         'Recipe
         Recipelist1.Edit = False
-        Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.recipes)
-        _recipes = New JavaScriptSerializer().Deserialize(Of List(Of Object))(recipeJson)
+        Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.test)
+        _recipes = New JavaScriptSerializer().Deserialize(Of List(Of RecipeData))(recipeJson)
 
-        For Each recipe As Object In _recipes
-            Console.WriteLine(recipe)
-            RecipeNames.Items.Add(recipe("name"))
+        For Each recipe As RecipeData In _recipes
+            RecipeNames.Items.Add(recipe.Name)
         Next
+
+
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -25,15 +26,17 @@ Public Class Fridge
         title = "New Recipe"
         recipeName = InputBox(message, title, "")
         RecipeNames.Items.Add(recipeName)
+        RecipeNames.SelectedItem = recipeName
         RecipeList1.Edit = True
+        RecipeList1.Clear()
         RecipeButtonStatus(False)
     End Sub
 
     Public Sub RecipeButtonStatus(value As Boolean)
-        RecipeNames.Enabled = False
         CreateRecipe.Enabled = value
         ModifyRecipeButton.Enabled = value
         DeleteRecipe.Enabled = value
+        RecipeNames.Enabled = value
     End Sub
 
     Private Sub DeleteRecipe_Click(sender As Object, e As EventArgs) Handles DeleteRecipe.Click
@@ -97,9 +100,11 @@ Public Class Fridge
                                               ByVal e As System.EventArgs) _
             Handles RecipeNames.SelectedValueChanged
         Dim selectedItem = RecipeNames.SelectedItem
+        RecipeList1.Clear()
         For Each item In _recipes
-            If item("name") = selectedItem Then
-                RecipeList1.LoadItems(item("items"))
+            If item.Name = selectedItem Then
+                RecipeList1.LoadItems(item.Items)
+                Exit For
             End If
         Next
     End Sub
@@ -119,5 +124,27 @@ Public Class Fridge
         For Each item As ListViewItem In shoppingListView.SelectedItems
             item.Remove()
         Next
+    End Sub
+
+    Public Sub SaveRecipe(items As Dictionary(Of String, Integer))
+        Dim selectedRecipe = RecipeNames.SelectedItem
+        Dim found = False
+        For Each recipe As RecipeData In _recipes
+            If recipe.Name = selectedRecipe Then
+                recipe.Items = items
+                found = True
+                Exit For
+            End If
+        Next
+        If Not found Then
+            Dim newRecipe = New RecipeData
+            newRecipe.Name = RecipeNames.SelectedItem
+            newRecipe.Items = items
+            _recipes.Add(newRecipe)
+        End If
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs)
+        RecipeList1.Clear()
     End Sub
 End Class

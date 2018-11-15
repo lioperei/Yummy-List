@@ -11,5 +11,18 @@
         "quantity": 2
       }
     ]
+  },
+  {
+    "name": "swag",
+    "items": [
+      {
+        "name": "weed",
+        "quantity": 4
+      },
+      {
+        "name": "beer",
+        "quantity": 2
+      }
+    ]
   }
 ]

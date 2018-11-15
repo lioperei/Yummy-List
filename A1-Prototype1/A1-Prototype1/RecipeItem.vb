@@ -1,8 +1,7 @@
 ﻿Public Class RecipeItem
-    Private _name As String
+    Public _name As String
     Private _quantity As Integer
-    Public Sub New(name As String, Optional ByVal quantity As Integer = 0)
-
+    Public Sub New(name As String, Optional ByVal quantity As Integer = 1)
         InitializeComponent()
         _name = name
         _quantity = quantity
@@ -45,4 +44,10 @@
     Private Sub RemoveButton_Click(sender As Object, e As EventArgs) Handles RemoveButton.Click
         Fridge.RecipeList1.Remove(Me)
     End Sub
+
+    Public Sub IncreaseQuantity(value As Integer)
+        _quantity += value
+        UpdateQuantity()
+    End Sub
+
 End Class

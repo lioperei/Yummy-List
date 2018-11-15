@@ -1,0 +1,16 @@
+[
+  {
+    "name": "pizza",
+    "items": {
+      "cheese": 4,
+      "pepperoni": 6
+    }
+  },
+  {
+    "name": "swag",
+    "items": {
+      "cheese": 2,
+      "beer":  69
+    }
+  }
+]
