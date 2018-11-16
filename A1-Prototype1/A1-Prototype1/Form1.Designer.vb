@@ -68,12 +68,14 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
+        Me.InventoryList1 = New A1_Prototype1.InventoryList()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ShoppingLists.SuspendLayout()
+        Me.Inventory.SuspendLayout()
         Me.RecipesTab.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -196,7 +198,7 @@ Partial Class Fridge
         '
         'shoppingListView
         '
-        Me.shoppingListView.Location = New System.Drawing.Point(523, 30)
+        Me.shoppingListView.Location = New System.Drawing.Point(498, 33)
         Me.shoppingListView.Margin = New System.Windows.Forms.Padding(2)
         Me.shoppingListView.Name = "shoppingListView"
         Me.shoppingListView.Size = New System.Drawing.Size(242, 316)
@@ -235,6 +237,7 @@ Partial Class Fridge
         '
         'Inventory
         '
+        Me.Inventory.Controls.Add(Me.InventoryList1)
         Me.Inventory.Location = New System.Drawing.Point(4, 22)
         Me.Inventory.Name = "Inventory"
         Me.Inventory.Padding = New System.Windows.Forms.Padding(3)
@@ -257,7 +260,7 @@ Partial Class Fridge
         '
         Me.RecipeList1.Location = New System.Drawing.Point(3, 3)
         Me.RecipeList1.Name = "RecipeList1"
-        Me.RecipeList1.Size = New System.Drawing.Size(684, 402)
+        Me.RecipeList1.Size = New System.Drawing.Size(781, 402)
         Me.RecipeList1.TabIndex = 5
         '
         'Button1
@@ -531,6 +534,13 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
+        'InventoryList1
+        '
+        Me.InventoryList1.Location = New System.Drawing.Point(4, 4)
+        Me.InventoryList1.Name = "InventoryList1"
+        Me.InventoryList1.Size = New System.Drawing.Size(791, 378)
+        Me.InventoryList1.TabIndex = 0
+        '
         'Fridge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -577,6 +587,7 @@ Partial Class Fridge
         CType(Me.inventoryBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cartBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShoppingLists.ResumeLayout(False)
+        Me.Inventory.ResumeLayout(False)
         Me.RecipesTab.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -628,4 +639,5 @@ Partial Class Fridge
     Friend WithEvents createListButton As Button
     Friend WithEvents shoppingListView As ListView
     Friend WithEvents RecipeList1 As RecipeList
+    Friend WithEvents InventoryList1 As InventoryList
 End Class

@@ -67,9 +67,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
-        Friend Shared ReadOnly Property recipes() As Byte()
+        Friend Shared ReadOnly Property inventory() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("recipes", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("inventory", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property
@@ -77,9 +77,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
-        Friend Shared ReadOnly Property test() As Byte()
+        Friend Shared ReadOnly Property recipes() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("test", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("recipes", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

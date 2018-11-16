@@ -9,7 +9,7 @@ Public Class RecipeList
         Me.Edit = False
         _items = New RecipeItemData
         ' Add any initialization after the InitializeComponent() call.
-        Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.test)
+        Dim recipeJson = System.Text.Encoding.UTF8.GetString(My.Resources.Data.recipes)
         _recipes = New JavaScriptSerializer().Deserialize(Of List(Of RecipeData))(recipeJson)
 
         For Each recipe As RecipeData In _recipes
@@ -111,6 +111,7 @@ Public Class RecipeList
             End If
             _items.Add(item, items(item))
         Next
+        Edit = Not ModifyRecipeButton.Enabled
     End Sub
 
     Public WriteOnly Property Edit As Boolean

@@ -1,28 +1,16 @@
 [
   {
     "name": "pizza",
-    "items": [
-      {
-        "name": "cheese",
-        "quantity": 4
-      },
-      {
-        "name": "pepperoni",
-        "quantity": 2
-      }
-    ]
+    "items": {
+      "cheese": 4,
+      "pepperoni": 6
+    }
   },
   {
     "name": "swag",
-    "items": [
-      {
-        "name": "weed",
-        "quantity": 4
-      },
-      {
-        "name": "beer",
-        "quantity": 2
-      }
-    ]
+    "items": {
+      "cheese": 2,
+      "beer": 69
+    }
   }
 ]

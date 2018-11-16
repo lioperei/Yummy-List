@@ -49,10 +49,6 @@
         FridgeTabControl.SelectedTab = Inventory
     End Sub
 
-
-
-
-
     Private Sub createListButton_Click(sender As Object, e As EventArgs) Handles createListButton.Click
         Dim listName = InputBox("Enter a list name", "New Shopping List", "")
         Console.WriteLine(listName)
