@@ -42,6 +42,7 @@
 
     Private Sub RemoveButton_Click(sender As Object, e As EventArgs) Handles RemoveButton.Click
         Fridge.RecipeList1.Remove(Me)
+        Fridge.ShoppingList1.Remove(Me)
     End Sub
 
     Public Sub IncreaseQuantity(value As Integer)
