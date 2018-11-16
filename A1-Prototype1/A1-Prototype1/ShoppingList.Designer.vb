@@ -39,6 +39,7 @@ Partial Class ShoppingList
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.sendToPhoneButton = New System.Windows.Forms.Button()
+        Me.splitList = New System.Windows.Forms.Button()
         Me.ImportPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -219,17 +220,31 @@ Partial Class ShoppingList
         '
         'sendToPhoneButton
         '
+        Me.sendToPhoneButton.BackColor = System.Drawing.Color.LavenderBlush
+        Me.sendToPhoneButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!)
         Me.sendToPhoneButton.Location = New System.Drawing.Point(1050, 98)
         Me.sendToPhoneButton.Name = "sendToPhoneButton"
         Me.sendToPhoneButton.Size = New System.Drawing.Size(114, 180)
         Me.sendToPhoneButton.TabIndex = 13
         Me.sendToPhoneButton.Text = "Send List to Phone"
-        Me.sendToPhoneButton.UseVisualStyleBackColor = True
+        Me.sendToPhoneButton.UseVisualStyleBackColor = False
+        '
+        'splitList
+        '
+        Me.splitList.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.splitList.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!)
+        Me.splitList.Location = New System.Drawing.Point(1050, 363)
+        Me.splitList.Name = "splitList"
+        Me.splitList.Size = New System.Drawing.Size(114, 180)
+        Me.splitList.TabIndex = 24
+        Me.splitList.Text = "Split List"
+        Me.splitList.UseVisualStyleBackColor = False
         '
         'ShoppingList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.splitList)
         Me.Controls.Add(Me.sendToPhoneButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -270,4 +285,5 @@ Partial Class ShoppingList
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents sendToPhoneButton As Button
+    Friend WithEvents splitList As Button
 End Class
