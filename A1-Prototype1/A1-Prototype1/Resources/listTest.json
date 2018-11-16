@@ -12,8 +12,26 @@
     "name": "Party!",
     "items": {
       "chips": 2,
-      "beer":  69,
+      "beer": 69,
       "pop": 420
+    }
+  },
+  {
+    "name": "Baby List",
+    "items": {
+      "diapers": 2,
+      "Formula": 3,
+      "bottle": 1,
+      "pacifier": 1
+    }
+  },
+  {
+    "name": "Thanksgiving",
+    "items": {
+      "turkey 1/2 lbs": 1,
+      "potatoes": 2,
+      "eggs": 1,
+      "gravy mix": 1
     }
   }
 ]

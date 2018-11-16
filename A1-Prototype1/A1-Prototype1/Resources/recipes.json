@@ -12,5 +12,44 @@
       "cheese": 2,
       "beer": 69
     }
+  },
+  {
+    "name": "Tortellini Soup",
+    "items": {
+      "olive oil": 1,
+      "mushrooms": 12,
+      "garlic clove": 1,
+      "tomatoes": 6,
+      "Tortellini Cheese": 2,
+      "Vegetable Broth": 1,
+      "Spinach": 1
+    }
+  },
+  {
+    "name": "BC Chip Cookies",
+    "items": {
+      "margarine": 1,
+      "brown sugar": 1,
+      "eggs": 2,
+      "vanilla essence": 1,
+      "bananas": 3,
+      "chocolate chips": 1,
+      "flour": 1,
+      "baking powder": 1,
+      "cinnamon": 1,
+      "ground nutmeg": 1
+    }
+  },
+  {
+    "name": "Very-Berry Smoothie",
+    "items": {
+      "small banana": 1,
+      "pineapple juice": 1,
+      "ice": 3,
+      "blueberries": 1,
+      "respberries": 1,
+      "honey": 1,
+      "ginger": 1
+    }
   }
 ]
