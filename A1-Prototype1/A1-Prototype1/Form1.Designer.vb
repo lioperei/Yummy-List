@@ -36,6 +36,7 @@ Partial Class Fridge
         Me.modifyListButton = New System.Windows.Forms.Button()
         Me.createListButton = New System.Windows.Forms.Button()
         Me.Inventory = New System.Windows.Forms.TabPage()
+        Me.InventoryList1 = New A1_Prototype1.InventoryList()
         Me.RecipesTab = New System.Windows.Forms.TabPage()
         Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -68,7 +69,6 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.InventoryList1 = New A1_Prototype1.InventoryList()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +93,7 @@ Partial Class Fridge
         '
         'Home
         '
+        Me.Home.BackColor = System.Drawing.Color.SpringGreen
         Me.Home.Controls.Add(Me.recipeBox)
         Me.Home.Controls.Add(Me.inventoryBox)
         Me.Home.Controls.Add(Me.cartBox)
@@ -105,16 +106,15 @@ Partial Class Fridge
         Me.Home.Size = New System.Drawing.Size(791, 408)
         Me.Home.TabIndex = 3
         Me.Home.Text = "Home"
-        Me.Home.UseVisualStyleBackColor = True
         '
         'recipeBox
         '
         Me.recipeBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.inventorypic
-        Me.recipeBox.Location = New System.Drawing.Point(435, 292)
+        Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.recepiepc2
+        Me.recipeBox.Location = New System.Drawing.Point(613, 289)
         Me.recipeBox.Margin = New System.Windows.Forms.Padding(2)
         Me.recipeBox.Name = "recipeBox"
-        Me.recipeBox.Size = New System.Drawing.Size(111, 85)
+        Me.recipeBox.Size = New System.Drawing.Size(143, 98)
         Me.recipeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.recipeBox.TabIndex = 5
         Me.recipeBox.TabStop = False
@@ -122,11 +122,12 @@ Partial Class Fridge
         'inventoryBox
         '
         Me.inventoryBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.inventoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
-        Me.inventoryBox.Location = New System.Drawing.Point(435, 161)
+        Me.inventoryBox.Location = New System.Drawing.Point(613, 152)
         Me.inventoryBox.Margin = New System.Windows.Forms.Padding(2)
         Me.inventoryBox.Name = "inventoryBox"
-        Me.inventoryBox.Size = New System.Drawing.Size(111, 85)
+        Me.inventoryBox.Size = New System.Drawing.Size(143, 95)
         Me.inventoryBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.inventoryBox.TabIndex = 4
         Me.inventoryBox.TabStop = False
@@ -135,10 +136,10 @@ Partial Class Fridge
         '
         Me.cartBox.BackColor = System.Drawing.Color.Navy
         Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
-        Me.cartBox.Location = New System.Drawing.Point(441, 32)
+        Me.cartBox.Location = New System.Drawing.Point(613, 22)
         Me.cartBox.Margin = New System.Windows.Forms.Padding(2)
         Me.cartBox.Name = "cartBox"
-        Me.cartBox.Size = New System.Drawing.Size(94, 75)
+        Me.cartBox.Size = New System.Drawing.Size(143, 95)
         Me.cartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.cartBox.TabIndex = 3
         Me.cartBox.TabStop = False
@@ -146,44 +147,48 @@ Partial Class Fridge
         'RecipeButton
         '
         Me.RecipeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.RecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecipeButton.Font = New System.Drawing.Font("Comic Sans MS", 48.22641!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RecipeButton.ForeColor = System.Drawing.Color.White
-        Me.RecipeButton.Location = New System.Drawing.Point(426, 280)
+        Me.RecipeButton.Location = New System.Drawing.Point(22, 280)
         Me.RecipeButton.Margin = New System.Windows.Forms.Padding(2)
         Me.RecipeButton.Name = "RecipeButton"
-        Me.RecipeButton.Size = New System.Drawing.Size(340, 116)
+        Me.RecipeButton.Size = New System.Drawing.Size(744, 116)
         Me.RecipeButton.TabIndex = 2
-        Me.RecipeButton.Text = "Recipes"
+        Me.RecipeButton.Text = "     Recipes"
+        Me.RecipeButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.RecipeButton.UseVisualStyleBackColor = False
         '
         'InventoryButton
         '
         Me.InventoryButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.InventoryButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InventoryButton.Font = New System.Drawing.Font("Comic Sans MS", 48.22641!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InventoryButton.ForeColor = System.Drawing.Color.White
-        Me.InventoryButton.Location = New System.Drawing.Point(426, 144)
+        Me.InventoryButton.Location = New System.Drawing.Point(22, 143)
         Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
         Me.InventoryButton.Name = "InventoryButton"
-        Me.InventoryButton.Size = New System.Drawing.Size(340, 116)
+        Me.InventoryButton.Size = New System.Drawing.Size(744, 116)
         Me.InventoryButton.TabIndex = 1
-        Me.InventoryButton.Text = "Inventory"
+        Me.InventoryButton.Text = "    Inventory"
+        Me.InventoryButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.InventoryButton.UseVisualStyleBackColor = False
         '
         'ShoppingListButton
         '
         Me.ShoppingListButton.BackColor = System.Drawing.Color.Navy
-        Me.ShoppingListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShoppingListButton.Font = New System.Drawing.Font("Comic Sans MS", 48.22641!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ShoppingListButton.ForeColor = System.Drawing.Color.White
-        Me.ShoppingListButton.Location = New System.Drawing.Point(426, 11)
+        Me.ShoppingListButton.Location = New System.Drawing.Point(22, 11)
         Me.ShoppingListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.ShoppingListButton.Name = "ShoppingListButton"
-        Me.ShoppingListButton.Size = New System.Drawing.Size(340, 116)
+        Me.ShoppingListButton.Size = New System.Drawing.Size(744, 116)
         Me.ShoppingListButton.TabIndex = 0
-        Me.ShoppingListButton.Text = "Shopping" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "List"
+        Me.ShoppingListButton.Text = "   Shopping List"
+        Me.ShoppingListButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.ShoppingListButton.UseVisualStyleBackColor = False
         '
         'ShoppingLists
         '
+        Me.ShoppingLists.BackColor = System.Drawing.Color.DarkTurquoise
         Me.ShoppingLists.Controls.Add(Me.shoppingListView)
         Me.ShoppingLists.Controls.Add(Me.deleteListButton)
         Me.ShoppingLists.Controls.Add(Me.modifyListButton)
@@ -194,7 +199,6 @@ Partial Class Fridge
         Me.ShoppingLists.Size = New System.Drawing.Size(791, 408)
         Me.ShoppingLists.TabIndex = 0
         Me.ShoppingLists.Text = "Shopping Lists"
-        Me.ShoppingLists.UseVisualStyleBackColor = True
         '
         'shoppingListView
         '
@@ -207,6 +211,9 @@ Partial Class Fridge
         '
         'deleteListButton
         '
+        Me.deleteListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+        Me.deleteListButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.deleteListButton.Font = New System.Drawing.Font("Modern No. 20", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deleteListButton.Location = New System.Drawing.Point(99, 270)
         Me.deleteListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.deleteListButton.Name = "deleteListButton"
@@ -217,6 +224,9 @@ Partial Class Fridge
         '
         'modifyListButton
         '
+        Me.modifyListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+        Me.modifyListButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.modifyListButton.Font = New System.Drawing.Font("Modern No. 20", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.modifyListButton.Location = New System.Drawing.Point(99, 169)
         Me.modifyListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.modifyListButton.Name = "modifyListButton"
@@ -227,6 +237,9 @@ Partial Class Fridge
         '
         'createListButton
         '
+        Me.createListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+        Me.createListButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.createListButton.Font = New System.Drawing.Font("Modern No. 20", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.createListButton.Location = New System.Drawing.Point(99, 73)
         Me.createListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.createListButton.Name = "createListButton"
@@ -246,6 +259,14 @@ Partial Class Fridge
         Me.Inventory.Text = "Inventory"
         Me.Inventory.UseVisualStyleBackColor = True
         '
+        'InventoryList1
+        '
+        Me.InventoryList1.BackColor = System.Drawing.Color.Moccasin
+        Me.InventoryList1.Location = New System.Drawing.Point(4, 4)
+        Me.InventoryList1.Name = "InventoryList1"
+        Me.InventoryList1.Size = New System.Drawing.Size(791, 378)
+        Me.InventoryList1.TabIndex = 0
+        '
         'RecipesTab
         '
         Me.RecipesTab.Controls.Add(Me.RecipeList1)
@@ -258,6 +279,7 @@ Partial Class Fridge
         '
         'RecipeList1
         '
+        Me.RecipeList1.BackColor = System.Drawing.Color.LavenderBlush
         Me.RecipeList1.Location = New System.Drawing.Point(3, 3)
         Me.RecipeList1.Name = "RecipeList1"
         Me.RecipeList1.Size = New System.Drawing.Size(781, 402)
@@ -265,6 +287,8 @@ Partial Class Fridge
         '
         'Button1
         '
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Location = New System.Drawing.Point(91, 439)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(44, 39)
@@ -274,6 +298,8 @@ Partial Class Fridge
         '
         'Button2
         '
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Location = New System.Drawing.Point(141, 439)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(44, 39)
@@ -283,6 +309,8 @@ Partial Class Fridge
         '
         'Button3
         '
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Location = New System.Drawing.Point(241, 439)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(44, 39)
@@ -292,6 +320,8 @@ Partial Class Fridge
         '
         'Button4
         '
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Location = New System.Drawing.Point(191, 439)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(44, 39)
@@ -301,6 +331,8 @@ Partial Class Fridge
         '
         'Button5
         '
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Location = New System.Drawing.Point(441, 439)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(44, 39)
@@ -310,6 +342,8 @@ Partial Class Fridge
         '
         'Button6
         '
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Location = New System.Drawing.Point(391, 439)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(44, 39)
@@ -319,6 +353,8 @@ Partial Class Fridge
         '
         'Button7
         '
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Location = New System.Drawing.Point(341, 439)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(44, 39)
@@ -328,6 +364,8 @@ Partial Class Fridge
         '
         'Button8
         '
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Location = New System.Drawing.Point(291, 439)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(44, 39)
@@ -337,6 +375,8 @@ Partial Class Fridge
         '
         'Button9
         '
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button9.Location = New System.Drawing.Point(538, 439)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(44, 39)
@@ -346,6 +386,8 @@ Partial Class Fridge
         '
         'Button10
         '
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button10.Location = New System.Drawing.Point(488, 439)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(44, 39)
@@ -355,6 +397,8 @@ Partial Class Fridge
         '
         'Button11
         '
+        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button11.Location = New System.Drawing.Point(516, 484)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(44, 39)
@@ -364,6 +408,8 @@ Partial Class Fridge
         '
         'Button12
         '
+        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button12.Location = New System.Drawing.Point(469, 484)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(44, 39)
@@ -373,6 +419,8 @@ Partial Class Fridge
         '
         'Button13
         '
+        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button13.Location = New System.Drawing.Point(419, 484)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(44, 39)
@@ -382,6 +430,8 @@ Partial Class Fridge
         '
         'Button14
         '
+        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button14.Location = New System.Drawing.Point(369, 484)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(44, 39)
@@ -391,6 +441,8 @@ Partial Class Fridge
         '
         'Button15
         '
+        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button15.Location = New System.Drawing.Point(319, 484)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(44, 39)
@@ -400,6 +452,8 @@ Partial Class Fridge
         '
         'Button16
         '
+        Me.Button16.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button16.Location = New System.Drawing.Point(269, 484)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(44, 39)
@@ -409,6 +463,8 @@ Partial Class Fridge
         '
         'Button17
         '
+        Me.Button17.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button17.Location = New System.Drawing.Point(219, 484)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(44, 39)
@@ -418,6 +474,8 @@ Partial Class Fridge
         '
         'Button18
         '
+        Me.Button18.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button18.Location = New System.Drawing.Point(169, 484)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(44, 39)
@@ -427,6 +485,8 @@ Partial Class Fridge
         '
         'Button19
         '
+        Me.Button19.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button19.Location = New System.Drawing.Point(119, 484)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(44, 39)
@@ -436,6 +496,8 @@ Partial Class Fridge
         '
         'Button20
         '
+        Me.Button20.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button20.Location = New System.Drawing.Point(438, 529)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(44, 39)
@@ -445,6 +507,8 @@ Partial Class Fridge
         '
         'Button21
         '
+        Me.Button21.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button21.Location = New System.Drawing.Point(388, 529)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(44, 39)
@@ -454,6 +518,8 @@ Partial Class Fridge
         '
         'Button22
         '
+        Me.Button22.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button22.Location = New System.Drawing.Point(338, 529)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(44, 39)
@@ -463,6 +529,8 @@ Partial Class Fridge
         '
         'Button23
         '
+        Me.Button23.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button23.Location = New System.Drawing.Point(288, 529)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(44, 39)
@@ -472,6 +540,8 @@ Partial Class Fridge
         '
         'Button24
         '
+        Me.Button24.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button24.Location = New System.Drawing.Point(238, 529)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(44, 39)
@@ -481,6 +551,8 @@ Partial Class Fridge
         '
         'Button25
         '
+        Me.Button25.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button25.Location = New System.Drawing.Point(188, 529)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(44, 39)
@@ -490,6 +562,8 @@ Partial Class Fridge
         '
         'Button26
         '
+        Me.Button26.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button26.Location = New System.Drawing.Point(138, 529)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(44, 39)
@@ -499,6 +573,8 @@ Partial Class Fridge
         '
         'Button27
         '
+        Me.Button27.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button27.Location = New System.Drawing.Point(488, 529)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(156, 39)
@@ -508,6 +584,8 @@ Partial Class Fridge
         '
         'Button28
         '
+        Me.Button28.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button28.Location = New System.Drawing.Point(566, 484)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(78, 39)
@@ -517,6 +595,8 @@ Partial Class Fridge
         '
         'Button29
         '
+        Me.Button29.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button29.Location = New System.Drawing.Point(588, 440)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(56, 39)
@@ -526,6 +606,8 @@ Partial Class Fridge
         '
         'HomeButton
         '
+        Me.HomeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold
+        Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.HomeButton.Location = New System.Drawing.Point(667, 456)
         Me.HomeButton.Margin = New System.Windows.Forms.Padding(2)
         Me.HomeButton.Name = "HomeButton"
@@ -534,18 +616,12 @@ Partial Class Fridge
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'InventoryList1
-        '
-        Me.InventoryList1.Location = New System.Drawing.Point(4, 4)
-        Me.InventoryList1.Name = "InventoryList1"
-        Me.InventoryList1.Size = New System.Drawing.Size(791, 378)
-        Me.InventoryList1.TabIndex = 0
-        '
         'Fridge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(800, 573)
         Me.Controls.Add(Me.HomeButton)
         Me.Controls.Add(Me.Button29)

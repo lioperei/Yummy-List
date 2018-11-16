@@ -34,43 +34,52 @@ Partial Class RecipeItem
         Me.ItemName.AutoSize = True
         Me.ItemName.Location = New System.Drawing.Point(44, 7)
         Me.ItemName.Name = "ItemName"
-        Me.ItemName.Size = New System.Drawing.Size(39, 13)
+        Me.ItemName.Size = New System.Drawing.Size(45, 15)
         Me.ItemName.TabIndex = 0
         Me.ItemName.Text = "Label1"
         '
         'RemoveButton
         '
+        Me.RemoveButton.BackColor = System.Drawing.Color.PeachPuff
+        Me.RemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose
+        Me.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.RemoveButton.Location = New System.Drawing.Point(8, 2)
         Me.RemoveButton.Name = "RemoveButton"
         Me.RemoveButton.Size = New System.Drawing.Size(30, 23)
         Me.RemoveButton.TabIndex = 1
         Me.RemoveButton.Text = "X"
-        Me.RemoveButton.UseVisualStyleBackColor = True
+        Me.RemoveButton.UseVisualStyleBackColor = False
         '
         'IncrementButton
         '
+        Me.IncrementButton.BackColor = System.Drawing.Color.PeachPuff
+        Me.IncrementButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose
+        Me.IncrementButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IncrementButton.Location = New System.Drawing.Point(265, 2)
         Me.IncrementButton.Name = "IncrementButton"
         Me.IncrementButton.Size = New System.Drawing.Size(30, 23)
         Me.IncrementButton.TabIndex = 2
         Me.IncrementButton.Text = "+"
-        Me.IncrementButton.UseVisualStyleBackColor = True
+        Me.IncrementButton.UseVisualStyleBackColor = False
         '
         'DecrementButton
         '
+        Me.DecrementButton.BackColor = System.Drawing.Color.PeachPuff
+        Me.DecrementButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose
+        Me.DecrementButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DecrementButton.Location = New System.Drawing.Point(229, 2)
         Me.DecrementButton.Name = "DecrementButton"
         Me.DecrementButton.Size = New System.Drawing.Size(30, 23)
         Me.DecrementButton.TabIndex = 3
         Me.DecrementButton.Text = "-"
-        Me.DecrementButton.UseVisualStyleBackColor = True
+        Me.DecrementButton.UseVisualStyleBackColor = False
         '
         'ItemQuantity
         '
         Me.ItemQuantity.AutoSize = True
         Me.ItemQuantity.Location = New System.Drawing.Point(184, 7)
         Me.ItemQuantity.Name = "ItemQuantity"
-        Me.ItemQuantity.Size = New System.Drawing.Size(39, 13)
+        Me.ItemQuantity.Size = New System.Drawing.Size(45, 15)
         Me.ItemQuantity.TabIndex = 4
         Me.ItemQuantity.Text = "Label1"
         '

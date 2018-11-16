@@ -31,7 +31,7 @@ Partial Class Phone
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(66, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 13)
+        Me.Label1.Size = New System.Drawing.Size(147, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MOBILE SHOPPING LIST"
         '
@@ -49,6 +49,7 @@ Partial Class Phone
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkSlateBlue
         Me.ClientSize = New System.Drawing.Size(278, 450)
         Me.Controls.Add(Me.WaitingForListLabel)
         Me.Controls.Add(Me.Label1)

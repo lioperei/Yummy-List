@@ -189,5 +189,11 @@
   <ItemGroup>
     <None Include="Resources\shoppingCart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recipepic2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53365.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

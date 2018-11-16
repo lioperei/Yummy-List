@@ -66,4 +66,7 @@
         Next
     End Sub
 
+    Private Sub ShoppingLists_Click(sender As Object, e As EventArgs) Handles ShoppingLists.Click
+
+    End Sub
 End Class
