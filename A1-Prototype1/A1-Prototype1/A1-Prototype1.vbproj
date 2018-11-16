@@ -127,6 +127,12 @@
     </Compile>
     <Compile Include="Resources\RecipeData.vb" />
     <Compile Include="Resources\RecipeItemData.vb" />
+    <Compile Include="ShoppingList.Designer.vb">
+      <DependentUpon>ShoppingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -155,6 +161,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Data.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingList.resx">
+      <DependentUpon>ShoppingList.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -171,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\listTest.json" />
     <None Include="Resources\recipes.json" />
     <None Include="Resources\inventory.jpg" />
   </ItemGroup>

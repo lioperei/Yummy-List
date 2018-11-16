@@ -3,7 +3,6 @@
     Public Sub New()
 
         InitializeComponent()
-        Phone.Show()
     End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
@@ -47,26 +46,5 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles inventoryBox.Click
         FridgeTabControl.SelectedTab = Inventory
-    End Sub
-
-    Private Sub createListButton_Click(sender As Object, e As EventArgs) Handles createListButton.Click
-        Dim listName = InputBox("Enter a list name", "New Shopping List", "")
-        Console.WriteLine(listName)
-        shoppingListView.Items.Add(listName)
-        'create and hide new form with all the required items, with the information being pulled from an excel or notepad file 
-    End Sub
-
-    Private Sub modifyListButton_Click(sender As Object, e As EventArgs) Handles modifyListButton.Click
-        ' Need to show that was hidden new form that handles a specific shopping list 
-    End Sub
-
-    Private Sub deleteListButton_Click(sender As Object, e As EventArgs) Handles deleteListButton.Click
-        For Each item As ListViewItem In shoppingListView.SelectedItems
-            item.Remove()
-        Next
-    End Sub
-
-    Private Sub ShoppingLists_Click(sender As Object, e As EventArgs) Handles ShoppingLists.Click
-
     End Sub
 End Class

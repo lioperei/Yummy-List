@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Weekly List",
+    "items": {
+      "milk": 1,
+      "eggs": 2,
+      "bread": 1,
+      "orange juice": 3
+    }
+  },
+  {
+    "name": "Party!",
+    "items": {
+      "chips": 2,
+      "beer":  69,
+      "pop": 420
+    }
+  }
+]
