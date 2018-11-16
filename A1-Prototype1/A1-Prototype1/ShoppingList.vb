@@ -185,4 +185,14 @@ Public Class ShoppingList
         Next
         Phone.Show()
     End Sub
+
+    Private Sub ImportConfirm_Click(sender As Object, e As EventArgs) Handles ImportConfirm.Click
+        ImportPanel.Visible = False
+        For Each list In _lists
+            If list.Name = ImportNames.SelectedItem Then
+                LoadItems(list.Items)
+                Exit For
+            End If
+        Next
+    End Sub
 End Class
