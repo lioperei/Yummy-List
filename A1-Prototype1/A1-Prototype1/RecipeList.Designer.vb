@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class RecipeList
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class RecipeList
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.RecipeItemPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.AddRecipeItem = New System.Windows.Forms.Button()
@@ -39,7 +39,6 @@ Partial Class RecipeList
         Me.Label4 = New System.Windows.Forms.Label()
         Me.RecipeNames = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.sendToPhoneButton = New System.Windows.Forms.Button()
         Me.ImportPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -227,20 +226,10 @@ Partial Class RecipeList
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'sendToPhoneButton
-        '
-        Me.sendToPhoneButton.Location = New System.Drawing.Point(1048, 108)
-        Me.sendToPhoneButton.Name = "sendToPhoneButton"
-        Me.sendToPhoneButton.Size = New System.Drawing.Size(114, 180)
-        Me.sendToPhoneButton.TabIndex = 12
-        Me.sendToPhoneButton.Text = "Send List to Phone"
-        Me.sendToPhoneButton.UseVisualStyleBackColor = True
-        '
         'RecipeList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.sendToPhoneButton)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DeleteRecipe)
         Me.Controls.Add(Me.ModifyRecipeButton)
@@ -282,5 +271,4 @@ Partial Class RecipeList
     Friend WithEvents Label4 As Label
     Friend WithEvents RecipeNames As ListBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents sendToPhoneButton As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Phone
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,39 +20,40 @@ Partial Class Phone
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.WaitingForListLabel = New System.Windows.Forms.Label()
+        Me.PhonePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(66, 9)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.Snow
+        Me.Label1.Location = New System.Drawing.Point(78, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 15)
+        Me.Label1.Size = New System.Drawing.Size(244, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MOBILE SHOPPING LIST"
         '
-        'WaitingForListLabel
+        'PhonePanel
         '
-        Me.WaitingForListLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!)
-        Me.WaitingForListLabel.Location = New System.Drawing.Point(12, 59)
-        Me.WaitingForListLabel.Name = "WaitingForListLabel"
-        Me.WaitingForListLabel.Size = New System.Drawing.Size(254, 344)
-        Me.WaitingForListLabel.TabIndex = 1
-        Me.WaitingForListLabel.Text = "WAITING FOR A SHOPPING LIST"
-        Me.WaitingForListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.PhonePanel.Location = New System.Drawing.Point(34, 65)
+        Me.PhonePanel.Name = "PhonePanel"
+        Me.PhonePanel.Size = New System.Drawing.Size(350, 579)
+        Me.PhonePanel.TabIndex = 1
         '
         'Phone
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.ClientSize = New System.Drawing.Size(278, 450)
-        Me.Controls.Add(Me.WaitingForListLabel)
+        Me.ClientSize = New System.Drawing.Size(417, 692)
+        Me.Controls.Add(Me.PhonePanel)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Phone"
         Me.Text = "Phone"
         Me.ResumeLayout(False)
@@ -61,5 +62,5 @@ Partial Class Phone
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents WaitingForListLabel As Label
+    Friend WithEvents PhonePanel As FlowLayoutPanel
 End Class

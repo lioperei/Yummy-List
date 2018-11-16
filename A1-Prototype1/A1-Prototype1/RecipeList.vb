@@ -172,18 +172,6 @@ Public Class RecipeList
         Next
     End Sub
 
-    Private Sub sendToPhoneButton_Click(sender As Object, e As EventArgs) Handles sendToPhoneButton.Click
-        Dim selectedItem = RecipeNames.SelectedItem
-        Clear()
-        For Each item In _recipes
-            If item.Name = selectedItem Then
-                LoadItems(item.Items)
-                Exit For
-            End If
-        Next
-        Phone.Show()
-    End Sub
-
     'Private Sub ImportNames_SelectedChanges(sender As Object, e As EventArgs) Handles ImportNames.SelectedIndexChanged
     'If ImportNames.SelectedItems.Count > 1 Then
     '       ImportConfirm.Enabled = True

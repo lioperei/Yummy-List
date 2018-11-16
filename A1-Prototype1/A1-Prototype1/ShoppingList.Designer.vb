@@ -35,9 +35,10 @@ Partial Class ShoppingList
         Me.Import = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.AddListItem = New System.Windows.Forms.Button()
-        Me.RecipeItemPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ListItemPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.sendToPhoneButton = New System.Windows.Forms.Button()
         Me.ImportPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -187,14 +188,14 @@ Partial Class ShoppingList
         Me.AddListItem.Text = "+"
         Me.AddListItem.UseVisualStyleBackColor = True
         '
-        'RecipeItemPanel
+        'ListItemPanel
         '
-        Me.RecipeItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.RecipeItemPanel.Location = New System.Drawing.Point(582, 59)
-        Me.RecipeItemPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.RecipeItemPanel.Name = "RecipeItemPanel"
-        Me.RecipeItemPanel.Size = New System.Drawing.Size(450, 282)
-        Me.RecipeItemPanel.TabIndex = 12
+        Me.ListItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.ListItemPanel.Location = New System.Drawing.Point(582, 59)
+        Me.ListItemPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ListItemPanel.Name = "ListItemPanel"
+        Me.ListItemPanel.Size = New System.Drawing.Size(450, 282)
+        Me.ListItemPanel.TabIndex = 12
         '
         'Label1
         '
@@ -216,10 +217,20 @@ Partial Class ShoppingList
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "QUANTITY"
         '
+        'sendToPhoneButton
+        '
+        Me.sendToPhoneButton.Location = New System.Drawing.Point(1050, 98)
+        Me.sendToPhoneButton.Name = "sendToPhoneButton"
+        Me.sendToPhoneButton.Size = New System.Drawing.Size(114, 180)
+        Me.sendToPhoneButton.TabIndex = 13
+        Me.sendToPhoneButton.Text = "Send List to Phone"
+        Me.sendToPhoneButton.UseVisualStyleBackColor = True
+        '
         'ShoppingList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.sendToPhoneButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DeleteList)
@@ -232,7 +243,7 @@ Partial Class ShoppingList
         Me.Controls.Add(Me.Import)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.AddListItem)
-        Me.Controls.Add(Me.RecipeItemPanel)
+        Me.Controls.Add(Me.ListItemPanel)
         Me.Name = "ShoppingList"
         Me.Size = New System.Drawing.Size(1186, 582)
         Me.ImportPanel.ResumeLayout(False)
@@ -255,7 +266,8 @@ Partial Class ShoppingList
     Friend WithEvents Import As Button
     Friend WithEvents SaveButton As Button
     Friend WithEvents AddListItem As Button
-    Friend WithEvents RecipeItemPanel As FlowLayoutPanel
+    Friend WithEvents ListItemPanel As FlowLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents sendToPhoneButton As Button
 End Class

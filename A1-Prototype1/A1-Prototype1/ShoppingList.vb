@@ -93,7 +93,7 @@ Public Class ShoppingList
         Dim newItem As RecipeItem
         For Each item In items.Keys
             If _items.ContainsKey(item) Then
-                For Each itemPanel As RecipeItem In RecipeItemPanel.Controls
+                For Each itemPanel As RecipeItem In ListItemPanel.Controls
                     If itemPanel._name = item Then
                         itemPanel.IncreaseQuantity(items(item))
                         Exit For
@@ -101,7 +101,7 @@ Public Class ShoppingList
                 Next
             Else
                 newItem = New RecipeItem(item, items(item))
-                RecipeItemPanel.Controls.Add(newItem)
+                ListItemPanel.Controls.Add(newItem)
             End If
             _items.Add(item, items(item))
         Next
@@ -114,7 +114,7 @@ Public Class ShoppingList
             AddListItem.Visible = value
             Cancel.Visible = value
             SaveButton.Visible = value
-            For Each item As RecipeItem In RecipeItemPanel.Controls
+            For Each item As RecipeItem In ListItemPanel.Controls
                 item.Edit = value
             Next
         End Set
@@ -122,7 +122,7 @@ Public Class ShoppingList
 
     Public Sub Remove(item As RecipeItem)
         _items.Remove(item._name)
-        RecipeItemPanel.Controls.Remove(item)
+        ListItemPanel.Controls.Remove(item)
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
@@ -133,7 +133,7 @@ Public Class ShoppingList
 
     Public Sub Clear()
         _items = New RecipeItemData
-        RecipeItemPanel.Controls.Clear()
+        ListItemPanel.Controls.Clear()
     End Sub
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
@@ -153,5 +153,36 @@ Public Class ShoppingList
                 End If
             Next
         End If
+    End Sub
+
+    Public Sub LoadItemsToPhone(items As Dictionary(Of String, Integer))
+        Dim newItem As RecipeItem
+        For Each item In items.Keys
+            If _items.ContainsKey(item) Then
+                For Each itemPanel As RecipeItem In Phone.PhonePanel.Controls
+                    If itemPanel._name = item Then
+                        itemPanel.IncreaseQuantity(items(item))
+                        Exit For
+                    End If
+                Next
+            Else
+                newItem = New RecipeItem(item, items(item))
+                Phone.PhonePanel.Controls.Add(newItem)
+            End If
+            _items.Add(item, items(item))
+        Next
+        Edit = Not ModifyListButton.Enabled
+    End Sub
+
+    Private Sub sendToPhoneButton_Click(sender As Object, e As EventArgs) Handles sendToPhoneButton.Click
+        Dim selectedItem = ShoppingListsBox.SelectedItem
+        Clear()
+        For Each item In _lists
+            If item.Name = selectedItem Then
+                LoadItemsToPhone(item.Items)
+                Exit For
+            End If
+        Next
+        Phone.Show()
     End Sub
 End Class
