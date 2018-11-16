@@ -1,10 +1,12 @@
 ﻿Public Class RecipeItem
     Public _name As String
     Private _quantity As Integer
-    Public Sub New(name As String, Optional ByVal quantity As Integer = 1)
+    Private _context As String
+    Public Sub New(name As String, Optional ByVal quantity As Integer = 1, Optional ByVal context As String = "list")
         InitializeComponent()
         _name = name
         _quantity = quantity
+        _context = context
         ItemName.Text = _name
         UpdateQuantity()
     End Sub
@@ -41,8 +43,20 @@
     End Sub
 
     Private Sub RemoveButton_Click(sender As Object, e As EventArgs) Handles RemoveButton.Click
-        Fridge.RecipeList1.Remove(Me)
-        Fridge.ShoppingList1.Remove(Me)
+        Select Case _context
+            Case "list"
+                Fridge.ShoppingList1.Remove(Me)
+            Case "phone"
+                Phone.Remove(Me)
+                Dim item = New RecipeItemData()
+                item.Add(_name, _quantity)
+                Fridge.InventoryList1.LoadItems(item)
+                RemoveButton.Text = "✔"
+            Case "recipe"
+                Fridge.RecipeList1.Remove(Me)
+            Case "inventory"
+                Fridge.InventoryList1.Remove(Me)
+        End Select
     End Sub
 
     Public Sub IncreaseQuantity(value As Integer)

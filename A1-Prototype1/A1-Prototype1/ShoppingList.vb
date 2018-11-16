@@ -100,7 +100,7 @@ Public Class ShoppingList
                     End If
                 Next
             Else
-                newItem = New RecipeItem(item, items(item))
+                newItem = New RecipeItem(item, items(item), )
                 ListItemPanel.Controls.Add(newItem)
             End If
             _items.Add(item, items(item))
@@ -166,7 +166,7 @@ Public Class ShoppingList
                     End If
                 Next
             Else
-                newItem = New RecipeItem(item, items(item))
+                newItem = New RecipeItem(item, items(item), "phone")
                 Phone.PhonePanel.Controls.Add(newItem)
             End If
             _items.Add(item, items(item))

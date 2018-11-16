@@ -17,7 +17,7 @@ Public Class InventoryList
 
     End Sub
 
-    Public Sub LoadItems(items As Dictionary(Of String, Integer))
+    Public Sub LoadItems(items As RecipeItemData)
         Dim newItem As RecipeItem
         For Each item In items.Keys
             If _items.ContainsKey(item) Then
@@ -28,11 +28,16 @@ Public Class InventoryList
                     End If
                 Next
             Else
-                newItem = New RecipeItem(item, items(item))
+                newItem = New RecipeItem(item, items(item), "inventory")
                 InventoryItemPanel.Controls.Add(newItem)
             End If
             _items.Add(item, items(item))
         Next
+    End Sub
+
+    Public Sub Remove(item As RecipeItem)
+        _items.Remove(item._name)
+        InventoryItemPanel.Controls.Remove(item)
     End Sub
 
 End Class

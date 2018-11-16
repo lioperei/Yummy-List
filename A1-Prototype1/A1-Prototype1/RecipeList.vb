@@ -106,7 +106,7 @@ Public Class RecipeList
                     End If
                 Next
             Else
-                newItem = New RecipeItem(item, items(item))
+                newItem = New RecipeItem(item, items(item), "recipe")
                 RecipeItemPanel.Controls.Add(newItem)
             End If
             _items.Add(item, items(item))
