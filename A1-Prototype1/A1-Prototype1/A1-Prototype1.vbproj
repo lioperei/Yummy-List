@@ -81,6 +81,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frequency.Designer.vb">
+      <DependentUpon>Frequency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frequency.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InventoryList.Designer.vb">
       <DependentUpon>InventoryList.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frequency.resx">
+      <DependentUpon>Frequency.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryList.resx">
       <DependentUpon>InventoryList.vb</DependentUpon>

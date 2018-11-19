@@ -31,6 +31,7 @@ Partial Class Fridge
         Me.InventoryButton = New System.Windows.Forms.Button()
         Me.ShoppingListButton = New System.Windows.Forms.Button()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
+        Me.ShoppingList1 = New A1_Prototype1.ShoppingList()
         Me.Inventory = New System.Windows.Forms.TabPage()
         Me.InventoryList1 = New A1_Prototype1.InventoryList()
         Me.RecipesTab = New System.Windows.Forms.TabPage()
@@ -65,7 +66,6 @@ Partial Class Fridge
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.ShoppingList1 = New A1_Prototype1.ShoppingList()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
         CType(Me.recipeBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,6 +188,13 @@ Partial Class Fridge
         Me.ShoppingLists.Size = New System.Drawing.Size(1190, 635)
         Me.ShoppingLists.TabIndex = 0
         Me.ShoppingLists.Text = "Shopping Lists"
+        '
+        'ShoppingList1
+        '
+        Me.ShoppingList1.Location = New System.Drawing.Point(1, 17)
+        Me.ShoppingList1.Name = "ShoppingList1"
+        Me.ShoppingList1.Size = New System.Drawing.Size(1186, 582)
+        Me.ShoppingList1.TabIndex = 0
         '
         'Inventory
         '
@@ -588,13 +595,6 @@ Partial Class Fridge
         Me.HomeButton.TabIndex = 30
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
-        '
-        'ShoppingList1
-        '
-        Me.ShoppingList1.Location = New System.Drawing.Point(1, 20)
-        Me.ShoppingList1.Name = "ShoppingList1"
-        Me.ShoppingList1.Size = New System.Drawing.Size(1186, 582)
-        Me.ShoppingList1.TabIndex = 0
         '
         'Fridge
         '

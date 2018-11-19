@@ -195,4 +195,15 @@ Public Class ShoppingList
             End If
         Next
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If ShoppingListsBox.SelectedItems.Count > 0 Then
+            Dim newWeekly As Frequency = New Frequency
+            newWeekly.Show()
+            If ShoppingListsBox.SelectedItem = "Weekly List" Then
+                newWeekly.CheckBox6.Checked = True
+            End If
+        End If
+
+    End Sub
 End Class
