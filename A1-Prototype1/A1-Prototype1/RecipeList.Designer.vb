@@ -43,49 +43,50 @@ Partial Class RecipeList
         '
         'RecipeItemPanel
         '
+        Me.RecipeItemPanel.AutoScroll = True
         Me.RecipeItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.RecipeItemPanel.Location = New System.Drawing.Point(579, 58)
-        Me.RecipeItemPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RecipeItemPanel.Location = New System.Drawing.Point(386, 38)
         Me.RecipeItemPanel.Name = "RecipeItemPanel"
-        Me.RecipeItemPanel.Size = New System.Drawing.Size(450, 282)
+        Me.RecipeItemPanel.Size = New System.Drawing.Size(388, 183)
         Me.RecipeItemPanel.TabIndex = 0
+        Me.RecipeItemPanel.WrapContents = False
         '
         'AddRecipeItem
         '
-        Me.AddRecipeItem.Location = New System.Drawing.Point(700, 346)
-        Me.AddRecipeItem.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AddRecipeItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.AddRecipeItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.AddRecipeItem.ImageAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.AddRecipeItem.Location = New System.Drawing.Point(467, 225)
         Me.AddRecipeItem.Name = "AddRecipeItem"
-        Me.AddRecipeItem.Size = New System.Drawing.Size(46, 35)
+        Me.AddRecipeItem.Size = New System.Drawing.Size(52, 23)
         Me.AddRecipeItem.TabIndex = 1
-        Me.AddRecipeItem.Text = "+"
+        Me.AddRecipeItem.Text = "+ Add"
+        Me.AddRecipeItem.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.AddRecipeItem.UseVisualStyleBackColor = True
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(916, 346)
-        Me.SaveButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.SaveButton.Location = New System.Drawing.Point(611, 225)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(112, 35)
+        Me.SaveButton.Size = New System.Drawing.Size(75, 23)
         Me.SaveButton.TabIndex = 0
         Me.SaveButton.Text = "SAVE"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
         'Import
         '
-        Me.Import.Location = New System.Drawing.Point(579, 346)
-        Me.Import.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Import.Location = New System.Drawing.Point(386, 225)
         Me.Import.Name = "Import"
-        Me.Import.Size = New System.Drawing.Size(112, 35)
+        Me.Import.Size = New System.Drawing.Size(75, 23)
         Me.Import.TabIndex = 2
         Me.Import.Text = "IMPORT"
         Me.Import.UseVisualStyleBackColor = True
         '
         'Cancel
         '
-        Me.Cancel.Location = New System.Drawing.Point(795, 346)
-        Me.Cancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Cancel.Location = New System.Drawing.Point(530, 225)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(112, 35)
+        Me.Cancel.Size = New System.Drawing.Size(75, 23)
         Me.Cancel.TabIndex = 3
         Me.Cancel.Text = "CANCEL"
         Me.Cancel.UseVisualStyleBackColor = True
@@ -93,20 +94,18 @@ Partial Class RecipeList
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(628, 31)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(452, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 20)
+        Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ITEM NAME"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(842, 31)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(662, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 20)
+        Me.Label2.Size = New System.Drawing.Size(62, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "QUANTITY"
         '
@@ -115,42 +114,38 @@ Partial Class RecipeList
         Me.ImportPanel.Controls.Add(Me.ImportNames)
         Me.ImportPanel.Controls.Add(Me.ImportConfirm)
         Me.ImportPanel.Controls.Add(Me.Label3)
-        Me.ImportPanel.Location = New System.Drawing.Point(579, 392)
-        Me.ImportPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ImportPanel.Location = New System.Drawing.Point(386, 255)
         Me.ImportPanel.Name = "ImportPanel"
-        Me.ImportPanel.Size = New System.Drawing.Size(450, 180)
+        Me.ImportPanel.Size = New System.Drawing.Size(388, 117)
         Me.ImportPanel.TabIndex = 5
         Me.ImportPanel.Visible = False
         '
         'ImportNames
         '
         Me.ImportNames.FormattingEnabled = True
-        Me.ImportNames.ItemHeight = 20
-        Me.ImportNames.Location = New System.Drawing.Point(69, 6)
-        Me.ImportNames.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ImportNames.Location = New System.Drawing.Point(50, 4)
         Me.ImportNames.Name = "ImportNames"
-        Me.ImportNames.Size = New System.Drawing.Size(253, 144)
+        Me.ImportNames.Size = New System.Drawing.Size(254, 95)
         Me.ImportNames.TabIndex = 4
         '
         'ImportConfirm
         '
         Me.ImportConfirm.BackColor = System.Drawing.Color.Lime
-        Me.ImportConfirm.Location = New System.Drawing.Point(333, 0)
-        Me.ImportConfirm.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ImportConfirm.Location = New System.Drawing.Point(310, 0)
         Me.ImportConfirm.Name = "ImportConfirm"
-        Me.ImportConfirm.Size = New System.Drawing.Size(112, 35)
+        Me.ImportConfirm.Size = New System.Drawing.Size(75, 23)
         Me.ImportConfirm.TabIndex = 3
+        Me.ImportConfirm.Text = "IMPORT"
         Me.ImportConfirm.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 6)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(4, 4)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 20)
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Import"
+        Me.Label3.Text = "Select >"
         '
         'DeleteRecipe
         '
@@ -158,10 +153,9 @@ Partial Class RecipeList
         Me.DeleteRecipe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.DeleteRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DeleteRecipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteRecipe.Location = New System.Drawing.Point(345, 420)
-        Me.DeleteRecipe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DeleteRecipe.Location = New System.Drawing.Point(230, 273)
         Me.DeleteRecipe.Name = "DeleteRecipe"
-        Me.DeleteRecipe.Size = New System.Drawing.Size(148, 135)
+        Me.DeleteRecipe.Size = New System.Drawing.Size(99, 88)
         Me.DeleteRecipe.TabIndex = 10
         Me.DeleteRecipe.Text = "Delete Recipe"
         Me.DeleteRecipe.UseVisualStyleBackColor = False
@@ -172,10 +166,9 @@ Partial Class RecipeList
         Me.ModifyRecipeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.ModifyRecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ModifyRecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ModifyRecipeButton.Location = New System.Drawing.Point(345, 242)
-        Me.ModifyRecipeButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ModifyRecipeButton.Location = New System.Drawing.Point(230, 157)
         Me.ModifyRecipeButton.Name = "ModifyRecipeButton"
-        Me.ModifyRecipeButton.Size = New System.Drawing.Size(148, 138)
+        Me.ModifyRecipeButton.Size = New System.Drawing.Size(99, 90)
         Me.ModifyRecipeButton.TabIndex = 9
         Me.ModifyRecipeButton.Text = "Modify Recipe"
         Me.ModifyRecipeButton.UseVisualStyleBackColor = False
@@ -186,10 +179,9 @@ Partial Class RecipeList
         Me.CreateRecipe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.CreateRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.CreateRecipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CreateRecipe.Location = New System.Drawing.Point(346, 58)
-        Me.CreateRecipe.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CreateRecipe.Location = New System.Drawing.Point(231, 38)
         Me.CreateRecipe.Name = "CreateRecipe"
-        Me.CreateRecipe.Size = New System.Drawing.Size(147, 129)
+        Me.CreateRecipe.Size = New System.Drawing.Size(98, 84)
         Me.CreateRecipe.TabIndex = 8
         Me.CreateRecipe.Text = "Create New Recipe"
         Me.CreateRecipe.UseVisualStyleBackColor = False
@@ -198,10 +190,9 @@ Partial Class RecipeList
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 21.73585!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(14, 8)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(9, 5)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(185, 62)
+        Me.Label4.Size = New System.Drawing.Size(122, 41)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Recipes"
         '
@@ -209,16 +200,15 @@ Partial Class RecipeList
         '
         Me.RecipeNames.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.RecipeNames.FormattingEnabled = True
-        Me.RecipeNames.ItemHeight = 29
-        Me.RecipeNames.Location = New System.Drawing.Point(26, 85)
-        Me.RecipeNames.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RecipeNames.ItemHeight = 20
+        Me.RecipeNames.Location = New System.Drawing.Point(17, 55)
         Me.RecipeNames.Name = "RecipeNames"
-        Me.RecipeNames.Size = New System.Drawing.Size(252, 468)
+        Me.RecipeNames.Size = New System.Drawing.Size(169, 304)
         Me.RecipeNames.TabIndex = 6
         '
         'RecipeList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.DeleteRecipe)
         Me.Controls.Add(Me.ModifyRecipeButton)
@@ -233,9 +223,8 @@ Partial Class RecipeList
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.AddRecipeItem)
         Me.Controls.Add(Me.RecipeItemPanel)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "RecipeList"
-        Me.Size = New System.Drawing.Size(1186, 582)
+        Me.Size = New System.Drawing.Size(791, 378)
         Me.ImportPanel.ResumeLayout(False)
         Me.ImportPanel.PerformLayout()
         Me.ResumeLayout(False)

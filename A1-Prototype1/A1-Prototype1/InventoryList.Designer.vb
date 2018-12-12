@@ -32,17 +32,19 @@ Partial Class InventoryList
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 25.81132!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(267, 55)
+        Me.Label1.Size = New System.Drawing.Size(239, 50)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "INVENTORY"
         '
         'InventoryItemPanel
         '
+        Me.InventoryItemPanel.AutoScroll = True
         Me.InventoryItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.InventoryItemPanel.Location = New System.Drawing.Point(27, 70)
         Me.InventoryItemPanel.Name = "InventoryItemPanel"
-        Me.InventoryItemPanel.Size = New System.Drawing.Size(324, 302)
+        Me.InventoryItemPanel.Size = New System.Drawing.Size(749, 302)
         Me.InventoryItemPanel.TabIndex = 1
+        Me.InventoryItemPanel.WrapContents = False
         '
         'InventoryList
         '

@@ -7,6 +7,13 @@
         _name = name
         _quantity = quantity
         _context = context
+
+        Select Case _context
+            Case "phone"
+                DecrementButton.Visible = False
+                IncrementButton.Visible = False
+                Me.Width = 229
+        End Select
         ItemName.Text = _name
         UpdateQuantity()
     End Sub
@@ -47,10 +54,12 @@
             Case "list"
                 Fridge.ShoppingList1.Remove(Me)
             Case "phone"
-                Phone.Remove(Me)
+                Phone.PhonePanel.Controls.Remove(Me)
                 Dim item = New RecipeItemData()
                 item.Add(_name, _quantity)
                 Fridge.InventoryList1.LoadItems(item)
+
+                Phone.BoughtList.Controls.Add(Me)
                 RemoveButton.Text = "✔"
             Case "recipe"
                 Fridge.RecipeList1.Remove(Me)

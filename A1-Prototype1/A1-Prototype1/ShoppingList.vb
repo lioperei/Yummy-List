@@ -11,7 +11,6 @@ Public Class ShoppingList
         ' Add any initialization after the InitializeComponent() call.
         Dim listJson = System.Text.Encoding.UTF8.GetString(My.Resources.listTest)
         _lists = New JavaScriptSerializer().Deserialize(Of List(Of RecipeData))(listJson)
-
         For Each list As RecipeData In _lists
             ShoppingListsBox.Items.Add(list.Name)
         Next
@@ -204,6 +203,10 @@ Public Class ShoppingList
                 newWeekly.CheckBox6.Checked = True
             End If
         End If
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class

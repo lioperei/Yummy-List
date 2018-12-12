@@ -214,5 +214,14 @@
   <ItemGroup>
     <None Include="Resources\53365.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhoneBackground.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonesmall.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
