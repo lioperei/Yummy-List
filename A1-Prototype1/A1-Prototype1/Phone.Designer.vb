@@ -27,10 +27,10 @@ Partial Class Phone
         Me.BoughtList = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PhonePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.PhonePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,6 +92,15 @@ Partial Class Phone
         Me.Panel1.Size = New System.Drawing.Size(295, 535)
         Me.Panel1.TabIndex = 4
         '
+        'PhonePanel
+        '
+        Me.PhonePanel.AutoScroll = True
+        Me.PhonePanel.Location = New System.Drawing.Point(11, 124)
+        Me.PhonePanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.PhonePanel.Name = "PhonePanel"
+        Me.PhonePanel.Size = New System.Drawing.Size(268, 160)
+        Me.PhonePanel.TabIndex = 3
+        '
         'Button2
         '
         Me.Button2.Image = Global.A1_Prototype1.My.Resources.Resources.angle_arrow_pointing_down__1_
@@ -106,9 +115,9 @@ Partial Class Phone
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(86, 65)
+        Me.ListBox1.Location = New System.Drawing.Point(86, 64)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 69)
+        Me.ListBox1.Size = New System.Drawing.Size(120, 43)
         Me.ListBox1.TabIndex = 5
         Me.ListBox1.Visible = False
         '
@@ -123,15 +132,6 @@ Partial Class Phone
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "DONE SHOPPING!"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'PhonePanel
-        '
-        Me.PhonePanel.AutoScroll = True
-        Me.PhonePanel.Location = New System.Drawing.Point(11, 124)
-        Me.PhonePanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.PhonePanel.Name = "PhonePanel"
-        Me.PhonePanel.Size = New System.Drawing.Size(268, 160)
-        Me.PhonePanel.TabIndex = 3
         '
         'Phone
         '

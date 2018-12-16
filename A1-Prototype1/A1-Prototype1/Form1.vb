@@ -104,4 +104,8 @@
             HomeButton.Enabled = False
         End If
     End Sub
+
+    Private Sub ShoppingList1_Load(sender As Object, e As EventArgs) Handles ShoppingList1.Load
+
+    End Sub
 End Class

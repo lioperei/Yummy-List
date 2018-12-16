@@ -134,11 +134,12 @@ Partial Class ShoppingList
         'ImportConfirm
         '
         Me.ImportConfirm.BackColor = System.Drawing.Color.Lime
+        Me.ImportConfirm.ForeColor = System.Drawing.Color.Black
         Me.ImportConfirm.Location = New System.Drawing.Point(237, 4)
         Me.ImportConfirm.Name = "ImportConfirm"
         Me.ImportConfirm.Size = New System.Drawing.Size(75, 95)
         Me.ImportConfirm.TabIndex = 3
-        Me.ImportConfirm.Text = "Import"
+        Me.ImportConfirm.Text = "IMPORT"
         Me.ImportConfirm.UseVisualStyleBackColor = False
         '
         'Label3

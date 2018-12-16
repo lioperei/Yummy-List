@@ -93,6 +93,12 @@
     <Compile Include="InventoryList.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="itemsList.Designer.vb">
+      <DependentUpon>itemsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="itemsList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryList.resx">
       <DependentUpon>InventoryList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemsList.resx">
+      <DependentUpon>itemsList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -249,6 +258,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\angle-arrow-pointing-down %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-file %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
