@@ -5,6 +5,7 @@
         InitializeComponent()
         HomeButton.Visible = True
         HomeButton.Enabled = True
+        Phone.Show()
     End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click

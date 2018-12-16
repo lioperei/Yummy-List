@@ -241,5 +241,14 @@
   <ItemGroup>
     <None Include="Resources\hamburger.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-arrow-pointing-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-arrow-pointing-down %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

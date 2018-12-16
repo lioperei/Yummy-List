@@ -14,6 +14,7 @@ Public Class ShoppingList
         For Each list As RecipeData In _lists
             ShoppingListsBox.Items.Add(list.Name)
         Next
+        loadListsToPhone()
     End Sub
 
     Private Sub CreateList_Click(sender As Object, e As EventArgs) Handles CreateList.Click
@@ -127,6 +128,7 @@ Public Class ShoppingList
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         ListButtonStatus(True)
         SaveList(_items)
+        loadListsToPhone()
         Me.Edit = False
     End Sub
 
@@ -173,11 +175,26 @@ Public Class ShoppingList
         Edit = Not ModifyListButton.Enabled
     End Sub
 
+    Public Sub loadListsToPhone()
+        Phone.ListBox1.Items.Clear()
+        For Each shoppingLists In ShoppingListsBox.Items
+            Phone.ListBox1.Items.Add(shoppingLists)
+        Next
+
+        Phone._items = _items
+
+        Dim selectList = ShoppingListsBox.SelectedItem
+        For Each item In _lists
+            Phone.shoppingLists.Add(item.Items)
+        Next
+    End Sub
+
     Private Sub sendToPhoneButton_Click(sender As Object, e As EventArgs) Handles sendToPhoneButton.Click
         Dim selectedItem = ShoppingListsBox.SelectedItem
         Clear()
         For Each item In _lists
             If item.Name = selectedItem Then
+                'Phone.shoppingLists.Add(item.Items)
                 LoadItemsToPhone(item.Items)
                 Exit For
             End If

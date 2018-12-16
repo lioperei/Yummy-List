@@ -96,7 +96,7 @@ Partial Class ShoppingList
         Me.ShoppingListLabel.ForeColor = System.Drawing.Color.RoyalBlue
         Me.ShoppingListLabel.Location = New System.Drawing.Point(11, 6)
         Me.ShoppingListLabel.Name = "ShoppingListLabel"
-        Me.ShoppingListLabel.Size = New System.Drawing.Size(248, 47)
+        Me.ShoppingListLabel.Size = New System.Drawing.Size(219, 41)
         Me.ShoppingListLabel.TabIndex = 18
         Me.ShoppingListLabel.Text = "Shopping Lists"
         '
@@ -105,10 +105,10 @@ Partial Class ShoppingList
         Me.ShoppingListsBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ShoppingListsBox.ForeColor = System.Drawing.Color.RoyalBlue
         Me.ShoppingListsBox.FormattingEnabled = True
-        Me.ShoppingListsBox.ItemHeight = 22
+        Me.ShoppingListsBox.ItemHeight = 20
         Me.ShoppingListsBox.Location = New System.Drawing.Point(19, 56)
         Me.ShoppingListsBox.Name = "ShoppingListsBox"
-        Me.ShoppingListsBox.Size = New System.Drawing.Size(169, 312)
+        Me.ShoppingListsBox.Size = New System.Drawing.Size(169, 304)
         Me.ShoppingListsBox.TabIndex = 17
         '
         'ImportPanel
@@ -146,7 +146,7 @@ Partial Class ShoppingList
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(4, 4)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 15)
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Select >"
         '
@@ -220,7 +220,7 @@ Partial Class ShoppingList
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label1.Location = New System.Drawing.Point(475, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 24)
+        Me.Label1.Size = New System.Drawing.Size(101, 20)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "ITEM NAME"
         '
@@ -231,7 +231,7 @@ Partial Class ShoppingList
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label2.Location = New System.Drawing.Point(629, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 24)
+        Me.Label2.Size = New System.Drawing.Size(91, 20)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "QUANTITY"
         '
@@ -249,6 +249,7 @@ Partial Class ShoppingList
         Me.sendToPhoneButton.TabIndex = 13
         Me.sendToPhoneButton.Text = "GO SHOPPING!"
         Me.sendToPhoneButton.UseVisualStyleBackColor = False
+        Me.sendToPhoneButton.Visible = False
         '
         'splitList
         '
