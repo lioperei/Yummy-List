@@ -2,6 +2,8 @@
     Public _name As String
     Private _quantity As Integer
     Private _context As String
+
+
     Public Sub New(name As String, Optional ByVal quantity As Integer = 1, Optional ByVal context As String = "list")
         InitializeComponent()
         _name = name
@@ -14,6 +16,20 @@
                 IncrementButton.Visible = False
                 Me.Width = 229
         End Select
+        Dim rand As New Random
+        Dim num As Integer = rand.Next(0, 2)
+        Console.WriteLine(num)
+        Select Case num
+            Case 0
+                Icon.Image = My.Resources.Data.beer
+            Case 1
+                Icon.Image = My.Resources.Data.dish
+            Case 2
+                Icon.Image = My.Resources.Data.hamburger
+            Case Else
+                Icon.Image = My.Resources.Data.dish
+        End Select
+        'Icon.Image = My.Resources.Data.dish
         ItemName.Text = _name
         UpdateQuantity()
     End Sub
