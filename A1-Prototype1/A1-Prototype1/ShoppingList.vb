@@ -14,7 +14,7 @@ Public Class ShoppingList
         For Each list As RecipeData In _lists
             ShoppingListsBox.Items.Add(list.Name)
         Next
-        loadListsToPhone()
+        Phone.loadLists(_lists)
     End Sub
 
     Private Sub CreateList_Click(sender As Object, e As EventArgs) Handles CreateList.Click
@@ -51,6 +51,7 @@ Public Class ShoppingList
             newList.Items = items
             _lists.Add(newList)
         End If
+        Phone.loadLists(_lists)
     End Sub
 
     Private Sub ShoppingListsBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ShoppingListsBox.SelectedIndexChanged
@@ -156,50 +157,50 @@ Public Class ShoppingList
         End If
     End Sub
 
-    Public Sub LoadItemsToPhone(items As Dictionary(Of String, Integer))
-        Dim newItem As RecipeItem
-        For Each item In items.Keys
-            If _items.ContainsKey(item) Then
-                For Each itemPanel As RecipeItem In Phone.PhonePanel.Controls
-                    If itemPanel._name = item Then
-                        itemPanel.IncreaseQuantity(items(item))
-                        Exit For
-                    End If
-                Next
-            Else
-                newItem = New RecipeItem(item, items(item), "phone")
-                Phone.PhonePanel.Controls.Add(newItem)
-            End If
-            _items.Add(item, items(item))
-        Next
-        Edit = Not ModifyListButton.Enabled
-    End Sub
+    'Public Sub LoadItemsToPhone(items As Dictionary(Of String, Integer))
+    '    Dim newItem As RecipeItem
+    '    For Each item In items.Keys
+    '        If _items.ContainsKey(item) Then
+    '            For Each itemPanel As RecipeItem In Phone.PhonePanel.Controls
+    '                If itemPanel._name = item Then
+    '                    itemPanel.IncreaseQuantity(items(item))
+    '                    Exit For
+    '                End If
+    '            Next
+    '        Else
+    '            newItem = New RecipeItem(item, items(item), "phone")
+    '            Phone.PhonePanel.Controls.Add(newItem)
+    '        End If
+    '        _items.Add(item, items(item))
+    '    Next
+    '    Edit = Not ModifyListButton.Enabled
+    'End Sub
 
     Public Sub loadListsToPhone()
-        Phone.ListBox1.Items.Clear()
-        For Each shoppingLists In ShoppingListsBox.Items
-            Phone.ListBox1.Items.Add(shoppingLists)
-        Next
+        'Phone.ListBox1.Items.Clear()
+        'For Each shoppingLists In ShoppingListsBox.Items
+        '    Phone.ListBox1.Items.Add(shoppingLists)
+        'Next
 
-        Phone._items = _items
+        'Phone._items = _items
 
-        Dim selectList = ShoppingListsBox.SelectedItem
-        For Each item In _lists
-            Phone.shoppingLists.Add(item.Items)
-        Next
+        'Dim selectList = ShoppingListsBox.SelectedItem
+        'For Each item In _lists
+        '    Phone.shoppingLists.Add(item.Items)
+        'Next
     End Sub
 
     Private Sub sendToPhoneButton_Click(sender As Object, e As EventArgs) Handles sendToPhoneButton.Click
-        Dim selectedItem = ShoppingListsBox.SelectedItem
-        Clear()
-        For Each item In _lists
-            If item.Name = selectedItem Then
-                'Phone.shoppingLists.Add(item.Items)
-                LoadItemsToPhone(item.Items)
-                Exit For
-            End If
-        Next
-        Phone.Show()
+        'Dim selectedItem = ShoppingListsBox.SelectedItem
+        'Clear()
+        'For Each item In _lists
+        '    If item.Name = selectedItem Then
+        '        'Phone.shoppingLists.Add(item.Items)
+        '        LoadItemsToPhone(item.Items)
+        '        Exit For
+        '    End If
+        'Next
+        'Phone.Show()
     End Sub
 
     Private Sub ImportConfirm_Click(sender As Object, e As EventArgs) Handles ImportConfirm.Click

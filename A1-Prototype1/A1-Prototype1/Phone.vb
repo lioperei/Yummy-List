@@ -1,7 +1,7 @@
 ﻿Public Class Phone
     Public _items As RecipeItemData
     Public _bought As RecipeItemData
-    Public shoppingLists As New List(Of Dictionary(Of String, Integer))
+    Public shoppingLists As New List(Of RecipeData)
 
     Public Sub New()
 
@@ -41,27 +41,25 @@
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         ListBox1.Visible = False
         'Load items in from lists
-        Dim selectedListonPhone As Integer
-        selectedListonPhone = ListBox1.SelectedIndex
-        Dim items As Dictionary(Of String, Integer)
-        items = shoppingLists.Item(selectedListonPhone)
-
-        'Load list item
-        Dim newItem As RecipeItem
-        For Each item In items.Keys
-            If _items.ContainsKey(item) Then
-                For Each itemPanel As RecipeItem In PhonePanel.Controls
-                    If itemPanel._name = item Then
-                        itemPanel.IncreaseQuantity(items(item))
-                        Exit For
-                    End If
+        PhonePanel.Controls.Clear()
+        BoughtList.Controls.Clear()
+        Dim selectedListonPhone As String = ListBox1.SelectedItem
+        For Each list In shoppingLists
+            If list.Name = selectedListonPhone Then
+                For Each item In list.Items.Keys
+                    PhonePanel.Controls.Add(New RecipeItem(item, list.Items(item), "phone"))
                 Next
-            Else
-                newItem = New RecipeItem(item, items(item), "phone")
-                PhonePanel.Controls.Add(newItem)
+                Exit For
             End If
-            _items.Add(item, items(item))
         Next
-
     End Sub
+
+    Public Sub loadLists(lists As List(Of RecipeData))
+        shoppingLists = lists
+        ListBox1.Items.Clear()
+        For Each list In shoppingLists
+            ListBox1.Items.Add(list.Name)
+        Next
+    End Sub
+
 End Class
