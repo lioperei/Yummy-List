@@ -23,14 +23,14 @@ Partial Class Phone
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PhonePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BoughtList = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PhonePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,16 +44,6 @@ Partial Class Phone
         Me.Label1.Size = New System.Drawing.Size(244, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MOBILE SHOPPING LIST"
-        '
-        'PhonePanel
-        '
-        Me.PhonePanel.AutoScroll = True
-        Me.PhonePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.PhonePanel.Location = New System.Drawing.Point(11, 122)
-        Me.PhonePanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.PhonePanel.Name = "PhonePanel"
-        Me.PhonePanel.Size = New System.Drawing.Size(268, 158)
-        Me.PhonePanel.TabIndex = 1
         '
         'Label2
         '
@@ -89,18 +79,38 @@ Partial Class Phone
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Thistle
+        Me.Panel1.Controls.Add(Me.PhonePanel)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.ListBox1)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.PhonePanel)
         Me.Panel1.Controls.Add(Me.BoughtList)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(19, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(295, 535)
         Me.Panel1.TabIndex = 4
+        '
+        'Button2
+        '
+        Me.Button2.Image = Global.A1_Prototype1.My.Resources.Resources.angle_arrow_pointing_down__1_
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.Location = New System.Drawing.Point(86, 36)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(120, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Load List"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(86, 65)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 69)
+        Me.ListBox1.TabIndex = 5
+        Me.ListBox1.Visible = False
         '
         'Button1
         '
@@ -114,25 +124,14 @@ Partial Class Phone
         Me.Button1.Text = "DONE SHOPPING!"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'ListBox1
+        'PhonePanel
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(86, 65)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 69)
-        Me.ListBox1.TabIndex = 5
-        Me.ListBox1.Visible = False
-        '
-        'Button2
-        '
-        Me.Button2.Image = Global.A1_Prototype1.My.Resources.Resources.angle_arrow_pointing_down__1_
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(86, 36)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Load List"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.PhonePanel.AutoScroll = True
+        Me.PhonePanel.Location = New System.Drawing.Point(11, 124)
+        Me.PhonePanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.PhonePanel.Name = "PhonePanel"
+        Me.PhonePanel.Size = New System.Drawing.Size(268, 160)
+        Me.PhonePanel.TabIndex = 3
         '
         'Phone
         '
@@ -154,7 +153,6 @@ Partial Class Phone
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents PhonePanel As FlowLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents BoughtList As FlowLayoutPanel
     Friend WithEvents Label3 As Label
@@ -162,4 +160,5 @@ Partial Class Phone
     Friend WithEvents Button1 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents PhonePanel As FlowLayoutPanel
 End Class
