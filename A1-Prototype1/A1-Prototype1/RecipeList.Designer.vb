@@ -45,67 +45,82 @@ Partial Class RecipeList
         '
         Me.RecipeItemPanel.AutoScroll = True
         Me.RecipeItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.RecipeItemPanel.ForeColor = System.Drawing.Color.FloralWhite
         Me.RecipeItemPanel.Location = New System.Drawing.Point(386, 38)
         Me.RecipeItemPanel.Name = "RecipeItemPanel"
-        Me.RecipeItemPanel.Size = New System.Drawing.Size(388, 183)
+        Me.RecipeItemPanel.Size = New System.Drawing.Size(388, 164)
         Me.RecipeItemPanel.TabIndex = 0
         Me.RecipeItemPanel.WrapContents = False
         '
         'AddRecipeItem
         '
+        Me.AddRecipeItem.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.AddRecipeItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.AddRecipeItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.AddRecipeItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.18868!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddRecipeItem.ForeColor = System.Drawing.Color.FloralWhite
         Me.AddRecipeItem.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.AddRecipeItem.Location = New System.Drawing.Point(467, 225)
+        Me.AddRecipeItem.Location = New System.Drawing.Point(487, 208)
         Me.AddRecipeItem.Name = "AddRecipeItem"
-        Me.AddRecipeItem.Size = New System.Drawing.Size(52, 23)
+        Me.AddRecipeItem.Size = New System.Drawing.Size(82, 40)
         Me.AddRecipeItem.TabIndex = 1
         Me.AddRecipeItem.Text = "+ Add"
-        Me.AddRecipeItem.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.AddRecipeItem.UseVisualStyleBackColor = True
+        Me.AddRecipeItem.UseVisualStyleBackColor = False
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(611, 225)
+        Me.SaveButton.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.18868!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.ForeColor = System.Drawing.Color.FloralWhite
+        Me.SaveButton.Location = New System.Drawing.Point(696, 208)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(75, 23)
+        Me.SaveButton.Size = New System.Drawing.Size(75, 40)
         Me.SaveButton.TabIndex = 0
         Me.SaveButton.Text = "SAVE"
-        Me.SaveButton.UseVisualStyleBackColor = True
+        Me.SaveButton.UseVisualStyleBackColor = False
         '
         'Import
         '
-        Me.Import.Location = New System.Drawing.Point(386, 225)
+        Me.Import.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.Import.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.18868!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Import.ForeColor = System.Drawing.Color.FloralWhite
+        Me.Import.Location = New System.Drawing.Point(386, 208)
         Me.Import.Name = "Import"
-        Me.Import.Size = New System.Drawing.Size(75, 23)
+        Me.Import.Size = New System.Drawing.Size(95, 40)
         Me.Import.TabIndex = 2
         Me.Import.Text = "IMPORT"
-        Me.Import.UseVisualStyleBackColor = True
+        Me.Import.UseVisualStyleBackColor = False
         '
         'Cancel
         '
-        Me.Cancel.Location = New System.Drawing.Point(530, 225)
+        Me.Cancel.BackColor = System.Drawing.Color.MediumSpringGreen
+        Me.Cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.18868!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.ForeColor = System.Drawing.Color.FloralWhite
+        Me.Cancel.Location = New System.Drawing.Point(600, 208)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(75, 23)
+        Me.Cancel.Size = New System.Drawing.Size(90, 40)
         Me.Cancel.TabIndex = 3
         Me.Cancel.Text = "CANCEL"
-        Me.Cancel.UseVisualStyleBackColor = True
+        Me.Cancel.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(452, 20)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.86792!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FloralWhite
+        Me.Label1.Location = New System.Drawing.Point(441, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.Size = New System.Drawing.Size(101, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ITEM NAME"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(662, 20)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.86792!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FloralWhite
+        Me.Label2.Location = New System.Drawing.Point(651, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 13)
+        Me.Label2.Size = New System.Drawing.Size(91, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "QUANTITY"
         '
@@ -114,6 +129,7 @@ Partial Class RecipeList
         Me.ImportPanel.Controls.Add(Me.ImportNames)
         Me.ImportPanel.Controls.Add(Me.ImportConfirm)
         Me.ImportPanel.Controls.Add(Me.Label3)
+        Me.ImportPanel.ForeColor = System.Drawing.Color.FloralWhite
         Me.ImportPanel.Location = New System.Drawing.Point(386, 255)
         Me.ImportPanel.Name = "ImportPanel"
         Me.ImportPanel.Size = New System.Drawing.Size(388, 117)
@@ -131,9 +147,9 @@ Partial Class RecipeList
         'ImportConfirm
         '
         Me.ImportConfirm.BackColor = System.Drawing.Color.Lime
-        Me.ImportConfirm.Location = New System.Drawing.Point(310, 0)
+        Me.ImportConfirm.Location = New System.Drawing.Point(310, 4)
         Me.ImportConfirm.Name = "ImportConfirm"
-        Me.ImportConfirm.Size = New System.Drawing.Size(75, 23)
+        Me.ImportConfirm.Size = New System.Drawing.Size(75, 95)
         Me.ImportConfirm.TabIndex = 3
         Me.ImportConfirm.Text = "IMPORT"
         Me.ImportConfirm.UseVisualStyleBackColor = False
@@ -143,45 +159,48 @@ Partial Class RecipeList
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(4, 4)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 13)
+        Me.Label3.Size = New System.Drawing.Size(51, 15)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Select >"
         '
         'DeleteRecipe
         '
-        Me.DeleteRecipe.BackColor = System.Drawing.Color.LavenderBlush
+        Me.DeleteRecipe.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.DeleteRecipe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.DeleteRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DeleteRecipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteRecipe.Location = New System.Drawing.Point(230, 273)
+        Me.DeleteRecipe.ForeColor = System.Drawing.Color.FloralWhite
+        Me.DeleteRecipe.Location = New System.Drawing.Point(216, 259)
         Me.DeleteRecipe.Name = "DeleteRecipe"
-        Me.DeleteRecipe.Size = New System.Drawing.Size(99, 88)
+        Me.DeleteRecipe.Size = New System.Drawing.Size(132, 88)
         Me.DeleteRecipe.TabIndex = 10
         Me.DeleteRecipe.Text = "Delete Recipe"
         Me.DeleteRecipe.UseVisualStyleBackColor = False
         '
         'ModifyRecipeButton
         '
-        Me.ModifyRecipeButton.BackColor = System.Drawing.Color.LavenderBlush
+        Me.ModifyRecipeButton.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.ModifyRecipeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.ModifyRecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ModifyRecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ModifyRecipeButton.Location = New System.Drawing.Point(230, 157)
+        Me.ModifyRecipeButton.ForeColor = System.Drawing.Color.FloralWhite
+        Me.ModifyRecipeButton.Location = New System.Drawing.Point(216, 155)
         Me.ModifyRecipeButton.Name = "ModifyRecipeButton"
-        Me.ModifyRecipeButton.Size = New System.Drawing.Size(99, 90)
+        Me.ModifyRecipeButton.Size = New System.Drawing.Size(132, 84)
         Me.ModifyRecipeButton.TabIndex = 9
         Me.ModifyRecipeButton.Text = "Modify Recipe"
         Me.ModifyRecipeButton.UseVisualStyleBackColor = False
         '
         'CreateRecipe
         '
-        Me.CreateRecipe.BackColor = System.Drawing.Color.LavenderBlush
+        Me.CreateRecipe.BackColor = System.Drawing.Color.MediumSpringGreen
         Me.CreateRecipe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Pink
         Me.CreateRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.CreateRecipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CreateRecipe.Location = New System.Drawing.Point(231, 38)
+        Me.CreateRecipe.ForeColor = System.Drawing.Color.FloralWhite
+        Me.CreateRecipe.Location = New System.Drawing.Point(216, 55)
         Me.CreateRecipe.Name = "CreateRecipe"
-        Me.CreateRecipe.Size = New System.Drawing.Size(98, 84)
+        Me.CreateRecipe.Size = New System.Drawing.Size(132, 84)
         Me.CreateRecipe.TabIndex = 8
         Me.CreateRecipe.Text = "Create New Recipe"
         Me.CreateRecipe.UseVisualStyleBackColor = False
@@ -190,20 +209,22 @@ Partial Class RecipeList
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 21.73585!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FloralWhite
         Me.Label4.Location = New System.Drawing.Point(9, 5)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 41)
+        Me.Label4.Size = New System.Drawing.Size(137, 47)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Recipes"
         '
         'RecipeNames
         '
         Me.RecipeNames.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.RecipeNames.ForeColor = System.Drawing.Color.DarkOrange
         Me.RecipeNames.FormattingEnabled = True
-        Me.RecipeNames.ItemHeight = 20
+        Me.RecipeNames.ItemHeight = 22
         Me.RecipeNames.Location = New System.Drawing.Point(17, 55)
         Me.RecipeNames.Name = "RecipeNames"
-        Me.RecipeNames.Size = New System.Drawing.Size(169, 304)
+        Me.RecipeNames.Size = New System.Drawing.Size(169, 290)
         Me.RecipeNames.TabIndex = 6
         '
         'RecipeList

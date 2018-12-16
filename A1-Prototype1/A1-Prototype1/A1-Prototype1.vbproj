@@ -223,5 +223,14 @@
   <ItemGroup>
     <None Include="Resources\phonesmall.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-296507_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-plusadd-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

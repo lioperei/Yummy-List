@@ -121,16 +121,25 @@
   <data name="inventorypic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventorypic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="listTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\listTest.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="recepiepc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\53365.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shoppingCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shoppingCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recipepic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recipepic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shoppingCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shoppingCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="recepiepc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\53365.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\listTest.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cross-296507_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-296507_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-plusadd-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-plusadd-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subtract-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

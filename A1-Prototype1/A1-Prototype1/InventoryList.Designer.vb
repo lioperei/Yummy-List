@@ -30,9 +30,10 @@ Partial Class InventoryList
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 25.81132!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Chocolate
         Me.Label1.Location = New System.Drawing.Point(17, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(239, 50)
+        Me.Label1.Size = New System.Drawing.Size(261, 55)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "INVENTORY"
         '
@@ -40,9 +41,11 @@ Partial Class InventoryList
         '
         Me.InventoryItemPanel.AutoScroll = True
         Me.InventoryItemPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.InventoryItemPanel.Location = New System.Drawing.Point(27, 70)
+        Me.InventoryItemPanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.86792!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InventoryItemPanel.ForeColor = System.Drawing.Color.Chocolate
+        Me.InventoryItemPanel.Location = New System.Drawing.Point(78, 70)
         Me.InventoryItemPanel.Name = "InventoryItemPanel"
-        Me.InventoryItemPanel.Size = New System.Drawing.Size(749, 302)
+        Me.InventoryItemPanel.Size = New System.Drawing.Size(570, 302)
         Me.InventoryItemPanel.TabIndex = 1
         Me.InventoryItemPanel.WrapContents = False
         '

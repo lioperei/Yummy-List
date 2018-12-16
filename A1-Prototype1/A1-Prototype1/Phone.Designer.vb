@@ -28,17 +28,18 @@ Partial Class Phone
         Me.BoughtList = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(60, 0)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.26415!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label1.Location = New System.Drawing.Point(23, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(168, 17)
+        Me.Label1.Size = New System.Drawing.Size(256, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MOBILE SHOPPING LIST"
         '
@@ -46,51 +47,68 @@ Partial Class Phone
         '
         Me.PhonePanel.AutoScroll = True
         Me.PhonePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.PhonePanel.Location = New System.Drawing.Point(5, 48)
+        Me.PhonePanel.Location = New System.Drawing.Point(11, 46)
         Me.PhonePanel.Margin = New System.Windows.Forms.Padding(2)
         Me.PhonePanel.Name = "PhonePanel"
-        Me.PhonePanel.Size = New System.Drawing.Size(276, 184)
+        Me.PhonePanel.Size = New System.Drawing.Size(268, 158)
         Me.PhonePanel.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(98, 33)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.830189!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label2.Location = New System.Drawing.Point(8, 27)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(70, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Unbought"
         '
         'BoughtList
         '
         Me.BoughtList.AutoScroll = True
-        Me.BoughtList.Location = New System.Drawing.Point(5, 249)
+        Me.BoughtList.Location = New System.Drawing.Point(11, 229)
         Me.BoughtList.Margin = New System.Windows.Forms.Padding(2)
         Me.BoughtList.Name = "BoughtList"
-        Me.BoughtList.Size = New System.Drawing.Size(276, 178)
+        Me.BoughtList.Size = New System.Drawing.Size(268, 177)
         Me.BoughtList.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(111, 234)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.830189!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label3.Location = New System.Drawing.Point(8, 210)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 13)
+        Me.Label3.Size = New System.Drawing.Size(53, 17)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Bought"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Thistle
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.PhonePanel)
         Me.Panel1.Controls.Add(Me.BoughtList)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(19, 53)
+        Me.Panel1.Location = New System.Drawing.Point(19, 43)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(295, 448)
+        Me.Panel1.Size = New System.Drawing.Size(295, 463)
         Me.Panel1.TabIndex = 4
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Blue
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.22642!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.SeaShell
+        Me.Button1.Location = New System.Drawing.Point(11, 411)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(268, 45)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "DONE SHOPPING!"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Phone
         '
@@ -117,4 +135,5 @@ Partial Class Phone
     Friend WithEvents BoughtList As FlowLayoutPanel
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
 End Class
