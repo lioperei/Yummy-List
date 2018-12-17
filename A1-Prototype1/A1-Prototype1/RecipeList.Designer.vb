@@ -185,6 +185,7 @@ Partial Class RecipeList
         Me.ModifyRecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ModifyRecipeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ModifyRecipeButton.ForeColor = System.Drawing.Color.FloralWhite
+        Me.ModifyRecipeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ModifyRecipeButton.Location = New System.Drawing.Point(188, 153)
         Me.ModifyRecipeButton.Name = "ModifyRecipeButton"
         Me.ModifyRecipeButton.Size = New System.Drawing.Size(220, 49)
@@ -203,7 +204,7 @@ Partial Class RecipeList
         Me.CreateRecipe.Name = "CreateRecipe"
         Me.CreateRecipe.Size = New System.Drawing.Size(220, 49)
         Me.CreateRecipe.TabIndex = 8
-        Me.CreateRecipe.Text = "Create New Recipe"
+        Me.CreateRecipe.Text = "Create New Recipe    "
         Me.CreateRecipe.UseVisualStyleBackColor = False
         '
         'Label4

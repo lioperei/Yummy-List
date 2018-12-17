@@ -71,6 +71,9 @@ Partial Class Fridge
         Me.InventoryList1 = New A1_Prototype1.InventoryList()
         Me.RecipeList1 = New A1_Prototype1.RecipeList()
         Me.ItemsList1 = New A1_Prototype1.itemsList()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.FridgeTabControl.SuspendLayout()
         Me.Home.SuspendLayout()
         Me.ShoppingLists.SuspendLayout()
@@ -83,6 +86,9 @@ Partial Class Fridge
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FridgeTabControl
@@ -188,6 +194,9 @@ Partial Class Fridge
         '
         'RecipesTab
         '
+        Me.RecipesTab.Controls.Add(Me.PictureBox4)
+        Me.RecipesTab.Controls.Add(Me.PictureBox5)
+        Me.RecipesTab.Controls.Add(Me.PictureBox6)
         Me.RecipesTab.Controls.Add(Me.RecipeList1)
         Me.RecipesTab.Location = New System.Drawing.Point(4, 25)
         Me.RecipesTab.Name = "RecipesTab"
@@ -697,6 +706,36 @@ Partial Class Fridge
         Me.ItemsList1.Size = New System.Drawing.Size(791, 378)
         Me.ItemsList1.TabIndex = 0
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.PictureBox4.Image = Global.A1_Prototype1.My.Resources.Resources.delete
+        Me.PictureBox4.Location = New System.Drawing.Point(373, 267)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(34, 38)
+        Me.PictureBox4.TabIndex = 8
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.PictureBox5.Image = Global.A1_Prototype1.My.Resources.Resources.newfile
+        Me.PictureBox5.Location = New System.Drawing.Point(377, 162)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(31, 38)
+        Me.PictureBox5.TabIndex = 7
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.PictureBox6.Image = Global.A1_Prototype1.My.Resources.Resources.add_file__1_
+        Me.PictureBox6.Location = New System.Drawing.Point(373, 64)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(37, 38)
+        Me.PictureBox6.TabIndex = 6
+        Me.PictureBox6.TabStop = False
+        '
         'Fridge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -750,6 +789,9 @@ Partial Class Fridge
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -803,4 +845,7 @@ Partial Class Fridge
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ItemsList1 As itemsList
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class
