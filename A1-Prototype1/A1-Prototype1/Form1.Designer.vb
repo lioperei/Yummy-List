@@ -25,9 +25,7 @@ Partial Class Fridge
         Me.FridgeTabControl = New System.Windows.Forms.TabControl()
         Me.Home = New System.Windows.Forms.TabPage()
         Me.ShoppingListButton = New System.Windows.Forms.Button()
-        Me.ShoppingList90 = New System.Windows.Forms.Button()
         Me.InventoryButton = New System.Windows.Forms.Button()
-        Me.InventoryButton90 = New System.Windows.Forms.Button()
         Me.RecipeButton = New System.Windows.Forms.Button()
         Me.ShoppingLists = New System.Windows.Forms.TabPage()
         Me.Inventory = New System.Windows.Forms.TabPage()
@@ -107,10 +105,8 @@ Partial Class Fridge
         Me.Home.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Home.Controls.Add(Me.cartBox)
         Me.Home.Controls.Add(Me.ShoppingListButton)
-        Me.Home.Controls.Add(Me.ShoppingList90)
         Me.Home.Controls.Add(Me.inventoryBox)
         Me.Home.Controls.Add(Me.InventoryButton)
-        Me.Home.Controls.Add(Me.InventoryButton90)
         Me.Home.Controls.Add(Me.recipeBox)
         Me.Home.Controls.Add(Me.RecipeButton)
         Me.Home.Location = New System.Drawing.Point(4, 25)
@@ -129,25 +125,11 @@ Partial Class Fridge
         Me.ShoppingListButton.Location = New System.Drawing.Point(22, 11)
         Me.ShoppingListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.ShoppingListButton.Name = "ShoppingListButton"
-        Me.ShoppingListButton.Size = New System.Drawing.Size(744, 116)
+        Me.ShoppingListButton.Size = New System.Drawing.Size(526, 116)
         Me.ShoppingListButton.TabIndex = 0
         Me.ShoppingListButton.Text = "Shopping List"
         Me.ShoppingListButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.ShoppingListButton.UseVisualStyleBackColor = False
-        '
-        'ShoppingList90
-        '
-        Me.ShoppingList90.BackColor = System.Drawing.Color.Navy
-        Me.ShoppingList90.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ShoppingList90.Font = New System.Drawing.Font("Comic Sans MS", 40.07547!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ShoppingList90.ForeColor = System.Drawing.Color.Gold
-        Me.ShoppingList90.Location = New System.Drawing.Point(623, 123)
-        Me.ShoppingList90.Margin = New System.Windows.Forms.Padding(2)
-        Me.ShoppingList90.Name = "ShoppingList90"
-        Me.ShoppingList90.Size = New System.Drawing.Size(143, 273)
-        Me.ShoppingList90.TabIndex = 7
-        Me.ShoppingList90.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ShoppingList90.UseVisualStyleBackColor = False
         '
         'InventoryButton
         '
@@ -158,26 +140,11 @@ Partial Class Fridge
         Me.InventoryButton.Location = New System.Drawing.Point(22, 143)
         Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
         Me.InventoryButton.Name = "InventoryButton"
-        Me.InventoryButton.Size = New System.Drawing.Size(567, 116)
+        Me.InventoryButton.Size = New System.Drawing.Size(526, 116)
         Me.InventoryButton.TabIndex = 1
         Me.InventoryButton.Text = "Inventory"
         Me.InventoryButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.InventoryButton.UseVisualStyleBackColor = False
-        '
-        'InventoryButton90
-        '
-        Me.InventoryButton90.BackColor = System.Drawing.Color.Navy
-        Me.InventoryButton90.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.InventoryButton90.Font = New System.Drawing.Font("Comic Sans MS", 40.07547!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InventoryButton90.ForeColor = System.Drawing.Color.Gold
-        Me.InventoryButton90.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.InventoryButton90.Location = New System.Drawing.Point(446, 143)
-        Me.InventoryButton90.Margin = New System.Windows.Forms.Padding(2)
-        Me.InventoryButton90.Name = "InventoryButton90"
-        Me.InventoryButton90.Size = New System.Drawing.Size(143, 253)
-        Me.InventoryButton90.TabIndex = 6
-        Me.InventoryButton90.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.InventoryButton90.UseVisualStyleBackColor = False
         '
         'RecipeButton
         '
@@ -188,7 +155,7 @@ Partial Class Fridge
         Me.RecipeButton.Location = New System.Drawing.Point(22, 280)
         Me.RecipeButton.Margin = New System.Windows.Forms.Padding(2)
         Me.RecipeButton.Name = "RecipeButton"
-        Me.RecipeButton.Size = New System.Drawing.Size(396, 116)
+        Me.RecipeButton.Size = New System.Drawing.Size(526, 116)
         Me.RecipeButton.TabIndex = 2
         Me.RecipeButton.Text = "Recipes"
         Me.RecipeButton.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -635,7 +602,7 @@ Partial Class Fridge
         '
         Me.cartBox.BackColor = System.Drawing.Color.Navy
         Me.cartBox.Image = Global.A1_Prototype1.My.Resources.Resources.shoppingCart
-        Me.cartBox.Location = New System.Drawing.Point(623, 289)
+        Me.cartBox.Location = New System.Drawing.Point(405, 20)
         Me.cartBox.Margin = New System.Windows.Forms.Padding(2)
         Me.cartBox.Name = "cartBox"
         Me.cartBox.Size = New System.Drawing.Size(143, 95)
@@ -647,7 +614,7 @@ Partial Class Fridge
         '
         Me.inventoryBox.BackColor = System.Drawing.Color.Navy
         Me.inventoryBox.Image = Global.A1_Prototype1.My.Resources.Resources.recipepic
-        Me.inventoryBox.Location = New System.Drawing.Point(446, 289)
+        Me.inventoryBox.Location = New System.Drawing.Point(405, 143)
         Me.inventoryBox.Margin = New System.Windows.Forms.Padding(2)
         Me.inventoryBox.Name = "inventoryBox"
         Me.inventoryBox.Size = New System.Drawing.Size(143, 98)
@@ -659,7 +626,7 @@ Partial Class Fridge
         '
         Me.recipeBox.BackColor = System.Drawing.Color.Navy
         Me.recipeBox.Image = Global.A1_Prototype1.My.Resources.Resources.recepiepc2
-        Me.recipeBox.Location = New System.Drawing.Point(265, 289)
+        Me.recipeBox.Location = New System.Drawing.Point(405, 280)
         Me.recipeBox.Margin = New System.Windows.Forms.Padding(2)
         Me.recipeBox.Name = "recipeBox"
         Me.recipeBox.Size = New System.Drawing.Size(143, 98)
@@ -831,8 +798,6 @@ Partial Class Fridge
     Friend WithEvents RecipeList1 As RecipeList
     Friend WithEvents InventoryList1 As InventoryList
     Friend WithEvents ShoppingList1 As ShoppingList
-    Friend WithEvents InventoryButton90 As Button
-    Friend WithEvents ShoppingList90 As Button
     Friend WithEvents ItemsTab As TabPage
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox

@@ -29,7 +29,7 @@
     Private Sub ShoppingListButton_Click(sender As Object, e As EventArgs) Handles ShoppingListButton.Click
         FridgeTabControl.SelectedTab = ShoppingLists
     End Sub
-    Private Sub ShoppingList90_Click(sender As Object, e As EventArgs) Handles ShoppingList90.Click
+    Private Sub ShoppingList90_Click(sender As Object, e As EventArgs) 
         FridgeTabControl.SelectedTab = ShoppingLists
     End Sub
 
@@ -58,20 +58,20 @@
 
     End Sub
 
-    Private Sub InventoryButton90_Click(sender As Object, e As EventArgs) Handles InventoryButton90.Click
+    Private Sub InventoryButton90_Click(sender As Object, e As EventArgs) 
         FridgeTabControl.SelectedTab = Inventory
     End Sub
 
-    Private Sub InventoryButton90_MouseHover(sender As Object, e As EventArgs) Handles InventoryButton90.MouseHover, InventoryButton.MouseHover, inventoryBox.MouseEnter
+    Private Sub InventoryButton90_MouseHover(sender As Object, e As EventArgs) Handles  InventoryButton.MouseHover, inventoryBox.MouseEnter
         InventoryButton.ForeColor = Color.WhiteSmoke
     End Sub
-    Private Sub InventoryButton90_MouseLeave(sender As Object, e As EventArgs) Handles InventoryButton90.MouseLeave, InventoryButton.MouseLeave, inventoryBox.MouseLeave
+    Private Sub InventoryButton90_MouseLeave(sender As Object, e As EventArgs) Handles  InventoryButton.MouseLeave, inventoryBox.MouseLeave
         InventoryButton.ForeColor = Color.Gold
     End Sub
-    Private Sub ShoppingList90_MouseHover(sender As Object, e As EventArgs) Handles ShoppingListButton.MouseHover, ShoppingList90.MouseHover, cartBox.MouseEnter
+    Private Sub ShoppingList90_MouseHover(sender As Object, e As EventArgs) Handles ShoppingListButton.MouseHover, cartBox.MouseEnter
         ShoppingListButton.ForeColor = Color.WhiteSmoke
     End Sub
-    Private Sub ShoppingList90_MouseLeave(sender As Object, e As EventArgs) Handles ShoppingListButton.MouseLeave, ShoppingList90.MouseLeave, cartBox.MouseLeave
+    Private Sub ShoppingList90_MouseLeave(sender As Object, e As EventArgs) Handles ShoppingListButton.MouseLeave, cartBox.MouseLeave
         ShoppingListButton.ForeColor = Color.Gold
     End Sub
     Private Sub RecipeButton_MouseHover(sender As Object, e As EventArgs) Handles RecipeButton.MouseHover, recipeBox.MouseEnter
@@ -106,6 +106,10 @@
     End Sub
 
     Private Sub ShoppingList1_Load(sender As Object, e As EventArgs) Handles ShoppingList1.Load
+
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs) 
 
     End Sub
 End Class

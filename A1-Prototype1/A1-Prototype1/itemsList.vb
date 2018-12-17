@@ -40,4 +40,10 @@ Public Class itemsList
         InventoryItemPanel.Controls.Remove(item)
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim store = InputBox("Enter a store name", "New List Item", "")
+        If Len(store) > 0 Then
+            ListBox1.Items.Add(store)
+        End If
+    End Sub
 End Class

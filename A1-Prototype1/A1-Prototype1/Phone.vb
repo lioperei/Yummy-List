@@ -61,5 +61,4 @@
             ListBox1.Items.Add(list.Name)
         Next
     End Sub
-
 End Class
